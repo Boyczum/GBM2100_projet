@@ -1,0 +1,8 @@
+C:\Users\Mathieu\OneDrive\Desktop\Projet2\MotionSensor.cydsn\MotionSensor.cyprj|4d7a5dda-a771-470e-87ba-bcfbf7333d3b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|151352b2-4c8d-4d0a-9c88-a7dff7745b21
+C:\Users\Mathieu\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|fe358917-4a3d-4d2a-9d29-d76cb497d8ee
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|814135d6-cd10-45a6-927b-f5f676b8cf08
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6ba7f9b5-909a-453f-b1a7-5a234582f484
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|69df2e17-86cf-4c09-95da-929a0bdda0b8
+C:\Users\Mathieu\OneDrive\Desktop\Projet2\MotionSensor_BasicI2C.cydsn\MotionSensor_BasicI2C.cyprj|c51d49fa-ac24-48d2-ac9f-5083efbbfe8b
+C:\Users\Mathieu\OneDrive\Desktop\Projet2\PSoC6_Interfacing_BMI160(I2C)_FreeRTOS01.cydsn\PSoC6_Interfacing_BMI160(I2C)_FreeRTOS01.cyprj|3794ce5b-2778-4713-be46-2e4361a53069

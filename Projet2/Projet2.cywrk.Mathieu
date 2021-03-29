@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Projet2</v>
+<v>Projet2\I2C_MotionSensor</v>
+<v>Projet2\I2C_MotionSensor\TopDesign</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Pins</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Analog</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\DMA</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Clocks</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Interrupts</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\System</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Directives</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Header Files</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\BMI160_library</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\BMI160_library\bmi160.c</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\BMI160_library\bmi160.h</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\BMI160_library\bmi160_defs.h</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Header Files</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Header Files\FreeRTOSConfig.h</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Projet2\I2C_MotionSensor\Shared Files</v>
+<v>Projet2\I2C_MotionSensor\Shared Files\cyapicallbacks.h</v>
+<v>Projet2\I2C_MotionSensor\Shared Files\stdio_user.c</v>
+<v>Projet2\I2C_MotionSensor\Shared Files\stdio_user.h</v>
+<v>Projet2\I2C_MotionSensor\Shared Files\system_psoc6.h</v>
+<v>Projet2\I2C_MotionSensor\Generated_Source</v>
+<v>Projet2\I2C_MotionSensor\Generated_Source\PSoC6</v>
+<v>Projet2\MotionDetectionViaInterupt</v>
+<v>Projet2\MotionDetectionViaInterupt\TopDesign</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr\Pins</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr\Analog</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr\DMA</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr\Clocks</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr\Interrupts</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr\System</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.cydwr\Directives</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Header Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>Projet2\MotionDetectionViaInterupt\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\BMI160 Library</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\BMI160 Library\bmi160.c</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\BMI160 Library\bmi160.h</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\BMI160 Library\bmi160_defs.h</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Header Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Header Files\RTOS and Task Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Header Files\RTOS and Task Files\FreeRTOSConfig.h</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Header Files\RTOS and Task Files\motion_task.h</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Header Files\RTOS and Task Files\uart_debug.h</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\I2CM Support</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\I2CM Support\i2cm_support.c</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\I2CM Support\i2cm_support.h</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\ARM GCC Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\ARM GCC Generic\startup_psoc6_01_cm4.S</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\ARM IAR Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\ARM IAR Generic\startup_psoc6_01_cm4.s</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\ARM MDK Generic</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\ARM MDK Generic\startup_psoc6_01_cm4.s</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\RTOS and Task Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\RTOS and Task Files\motion_task.c</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\RTOS and Task Files\uart_debug.c</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\main_cm4.c</v>
+<v>Projet2\MotionDetectionViaInterupt\CM4 (Core 1)\Source Files\system_psoc6_cm4.c</v>
+<v>Projet2\MotionDetectionViaInterupt\Shared Files\cyapicallbacks.h</v>
+<v>Projet2\MotionDetectionViaInterupt\Shared Files\stdio_user.c</v>
+<v>Projet2\MotionDetectionViaInterupt\Shared Files\stdio_user.h</v>
+<v>Projet2\MotionDetectionViaInterupt\Shared Files\system_psoc6.h</v>
+<v>Projet2\MotionDetectionViaInterupt\Generated_Source\PSoC6</v>
+<v>Projet2\CE223468_PSoC6_Interfacing_BMI160(I2C)_FreeRTOS.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Pins</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Analog</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\DMA</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Clocks</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Interrupts</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\System</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.cydwr\Directives</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM GCC Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM GCC Generic\cy8c6xx7_cm0plus.ld</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM IAR Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM IAR Generic\cy8c6xx7_cm0plus.icf</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM MDK Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\ARM MDK Generic\cy8c6xx7_cm0plus.scat</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Header Files</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM GCC Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM GCC Generic\startup_psoc6_01_cm0plus.S</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM IAR Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM IAR Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM MDK Generic</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\ARM MDK Generic\startup_psoc6_01_cm0plus.s</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\main_cm0p.c</v>
+<v>Projet2\I2C_MotionSensor\CM0p (Core 0)\Source Files\system_psoc6_cm0plus.c</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM GCC Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM GCC Generic\cy8c6xx7_cm4_dual.ld</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM IAR Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM IAR Generic\cy8c6xx7_cm4_dual.icf</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM MDK Generic</v>
+<v>Projet2\I2C_MotionSensor\CM4 (Core 1)\ARM MDK Generic\cy8c6xx7_cm4_dual.scat</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Projet2</v>
+<v>Projet2\I2C_MotionSensor</v>
+<v>Projet2\I2C_MotionSensor\TopDesign</v>
+<v>Projet2\I2C_MotionSensor\TopDesign\TopDesign.cysch</v>
+<v>Projet2\MotionDetectionViaInterupt</v>
+<v>Projet2\MotionDetectionViaInterupt\TopDesign</v>
+<v>Projet2\MotionDetectionViaInterupt\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projet2</v>
+<v>Projet2\I2C_MotionSensor</v>
+<v>Projet2\I2C_MotionSensor\TopDesign</v>
+<v>Projet2\I2C_MotionSensor\TopDesign\TopDesign.cysch</v>
+<v>Projet2\MotionDetectionViaInterupt</v>
+<v>Projet2\MotionDetectionViaInterupt\TopDesign</v>
+<v>Projet2\MotionDetectionViaInterupt\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Projet2</v>
+<v>Projet2\I2C_MotionSensor</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\retarget.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\stdio_user.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\I2C_MotionSensor.elf</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\I2C_MotionSensor.hex</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\I2C_MotionSensor.map</v>
+<v>Projet2\I2C_MotionSensor\CortexM4</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\bmi160.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\croutine.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\event_groups.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\heap_1.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\list.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\port.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\queue.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\retarget.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm4.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\stdio_user.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\stream_buffer.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm4.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\tasks.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\timers.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\I2C_MotionSensor.elf</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\I2C_MotionSensor.hex</v>
+<v>Projet2\I2C_MotionSensor\CortexM4\ARM_GCC_541\Debug\I2C_MotionSensor.map</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.gpdsc</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor.rpt</v>
+<v>Projet2\I2C_MotionSensor\I2C_MotionSensor_timing.html</v>
+<v>Projet2\MotionDetectionViaInterupt</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\DEBUG_UART.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\I2Cm.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\main_cm0p.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\retarget.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm0plus.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\stdio_user.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm0plus.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\MotionDetectionViaInterupt.elf</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\MotionDetectionViaInterupt.hex</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM0p\ARM_GCC_541\Debug\MotionDetectionViaInterupt.map</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\bmi160.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\croutine.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cyfitter_sysint_cfg.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\DEBUG_UART.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\event_groups.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\heap_1.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\I2Cm.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\i2cm_support.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\list.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\main_cm4.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\motion_task.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\port.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\queue.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\retarget.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\startup_psoc6_01_cm4.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\stdio_user.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\stream_buffer.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\system_psoc6_cm4.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\tasks.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\timers.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\Listing Files\uart_debug.lst</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\MotionDetectionViaInterupt.elf</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\MotionDetectionViaInterupt.hex</v>
+<v>Projet2\MotionDetectionViaInterupt\CortexM4\ARM_GCC_541\Debug\MotionDetectionViaInterupt.map</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.gpdsc</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt.rpt</v>
+<v>Projet2\MotionDetectionViaInterupt\MotionDetectionViaInterupt_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projet2</v>
+<v>Projet2\I2C_MotionSensor</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ble_clk.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_device.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_efuse.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_flash.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_gpio.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_drv.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_pipe.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_ipc_sema.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_lvd.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_profile.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_prot.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_common.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_ezi2c.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_i2c.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_spi.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_scb_uart.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysanalog.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysclk.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_sysint.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syslib_gcc.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_syspm.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_systick.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_trigmux.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cy_wdt.lst</v>
+<v>Projet2\I2C_MotionSensor\CortexM0p\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Projet2</v>
+<v>Projet2\I2C_MotionSensor</v>
+<v>Projet2\I2C_MotionSensor\PSoC 6 Architecture TRM</v>
+<v>Projet2\I2C_MotionSensor\PSoC 63 Family Datasheet</v>
+<v>Projet2\I2C_MotionSensor\Peripheral Driver Library</v>
+<v>Projet2\I2C_MotionSensor\System Reference Guides</v>
+<v>Projet2\I2C_MotionSensor\GPIO_PDL_v1_0</v>
+<v>Projet2\I2C_MotionSensor\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Projet2\I2C_MotionSensor\SCB_I2C_PDL_v2_0.pdf</v>
+<v>Projet2\I2C_MotionSensor\SCB_UART_PDL_v2_0.pdf</v>
+<v>Projet2\I2C_MotionSensor\SysInt_PDL_v1_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt</v>
+<v>Projet2\MotionDetectionViaInterupt\PSoC 6 Architecture TRM</v>
+<v>Projet2\MotionDetectionViaInterupt\PSoC 63 Family Datasheet</v>
+<v>Projet2\MotionDetectionViaInterupt\Peripheral Driver Library</v>
+<v>Projet2\MotionDetectionViaInterupt\System Reference Guides</v>
+<v>Projet2\MotionDetectionViaInterupt\GPIO_PDL_v1_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt\SCB_I2C_PDL_v2_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt\SCB_UART_PDL_v2_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt\SysInt_PDL_v1_0.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Projet2</v>
+<v>Projet2\I2C_MotionSensor</v>
+<v>Projet2\I2C_MotionSensor\PSoC 6 Architecture TRM</v>
+<v>Projet2\I2C_MotionSensor\PSoC 63 Family Datasheet</v>
+<v>Projet2\I2C_MotionSensor\Peripheral Driver Library</v>
+<v>Projet2\I2C_MotionSensor\System Reference Guides</v>
+<v>Projet2\I2C_MotionSensor\GPIO_PDL_v1_0</v>
+<v>Projet2\I2C_MotionSensor\GPIO_PDL_v1_0\GPIO_PDL_v1_0.pdf</v>
+<v>Projet2\I2C_MotionSensor\SCB_I2C_PDL_v2_0.pdf</v>
+<v>Projet2\I2C_MotionSensor\SCB_UART_PDL_v2_0.pdf</v>
+<v>Projet2\I2C_MotionSensor\SysInt_PDL_v1_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt</v>
+<v>Projet2\MotionDetectionViaInterupt\PSoC 6 Architecture TRM</v>
+<v>Projet2\MotionDetectionViaInterupt\PSoC 63 Family Datasheet</v>
+<v>Projet2\MotionDetectionViaInterupt\Peripheral Driver Library</v>
+<v>Projet2\MotionDetectionViaInterupt\System Reference Guides</v>
+<v>Projet2\MotionDetectionViaInterupt\GPIO_PDL_v1_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt\SCB_I2C_PDL_v2_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt\SCB_UART_PDL_v2_0.pdf</v>
+<v>Projet2\MotionDetectionViaInterupt\SysInt_PDL_v1_0.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\MotionDetectionViaInterupt.cydsn\main_cm4.c" />
+<name v=".\I2C_MotionSensor.cydsn\main_cm4.c" />
+<name v=".\MotionDetectionViaInterupt.cydsn\bmi160_library\bmi160.h" />
+<name v=".\MotionDetectionViaInterupt.cydsn\bmi160_library\bmi160_defs.h" />
+<name v=".\I2C_MotionSensor.cydsn\Generated_Source\PSoC6\I2C.h" />
+<name v="..\bmi160_library\bmi160.c" />
+<name v="..\bmi160_library\bmi160_defs.h" />
+<name v=".\I2C_MotionSensor.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\I2C_MotionSensor.cydsn\I2C_MotionSensor.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="966, 382" SelectedTabbedMdiWindow="3dca9ac5-18cb-443f-8af6-2ed93ed5ab35"><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\Projet2\MotionDetectionViaInterupt.cydsn\main_cm4.c" Guid="baa5007a-886d-4fb7-9b91-a04e4c21d598" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="da8e6340-7ba7-45df-ab11-afc13e8861d7" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\Projet2\I2C_MotionSensor.cydsn\main_cm4.c" Guid="ab80ec03-9959-42e8-a4d2-4dc6fee46ec7" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\Projet2\MotionDetectionViaInterupt.cydsn\bmi160_library\bmi160.h" Guid="1432a75e-e410-4298-8a94-8d7933616ef9" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\Projet2\MotionDetectionViaInterupt.cydsn\bmi160_library\bmi160_defs.h" Guid="44fbb3bb-3eb3-4ef9-bb11-8e24a4fb7f03" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\Projet2\I2C_MotionSensor.cydsn\Generated_Source\PSoC6\I2C.h" Guid="439d6770-bece-443d-8c74-0d6b93976e99" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\bmi160_library\bmi160.c" Guid="d5b6c34c-a48d-4b76-8e35-12a9e4ff4681" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\bmi160_library\bmi160_defs.h" Guid="8c552aff-6222-484d-9fd2-5fe9455c5c6e" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\Projet2\I2C_MotionSensor.cydsn\TopDesign\TopDesign.cysch" Guid="fda10b30-aa29-450e-a453-e682eb022c2a" /><DocumentWindow Key="C:\Users\Mathieu\OneDrive\Desktop\Projet2\I2C_MotionSensor.cydsn\I2C_MotionSensor.cydwr" Guid="3dca9ac5-18cb-443f-8af6-2ed93ed5ab35" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

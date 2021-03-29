@@ -1,0 +1,3364 @@
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m4
+   3              		.eabi_attribute 27, 1
+   4              		.fpu fpv4-sp-d16
+   5              		.eabi_attribute 20, 1
+   6              		.eabi_attribute 21, 1
+   7              		.eabi_attribute 23, 3
+   8              		.eabi_attribute 24, 1
+   9              		.eabi_attribute 25, 1
+  10              		.eabi_attribute 26, 1
+  11              		.eabi_attribute 30, 1
+  12              		.eabi_attribute 34, 1
+  13              		.eabi_attribute 18, 4
+  14              		.thumb
+  15              		.syntax unified
+  16              		.file	"heap_1.c"
+  17              		.text
+  18              	.Ltext0:
+  19              		.cfi_sections	.debug_frame
+  20              		.section	.text.pvPortMalloc,"ax",%progbits
+  21              		.align	2
+  22              		.global	pvPortMalloc
+  23              		.thumb
+  24              		.thumb_func
+  25              		.type	pvPortMalloc, %function
+  26              	pvPortMalloc:
+  27              	.LFB512:
+  28              		.file 1 "Generated_Source\\PSoC6\\pdl\\rtos\\FreeRTOS\\10.0.1\\Source\\portable\\MemMang\\heap_1.c
+   1:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /*
+   2:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * FreeRTOS Kernel V10.0.1
+   3:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+   4:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  *
+   5:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * Permission is hereby granted, free of charge, to any person obtaining a copy of
+   6:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * this software and associated documentation files (the "Software"), to deal in
+   7:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * the Software without restriction, including without limitation the rights to
+   8:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+   9:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * the Software, and to permit persons to whom the Software is furnished to do so,
+  10:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * subject to the following conditions:
+  11:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  *
+  12:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * The above copyright notice and this permission notice shall be included in all
+  13:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * copies or substantial portions of the Software.
+  14:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  *
+  15:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  16:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  17:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  18:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  19:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  20:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  21:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  *
+  22:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * http://www.FreeRTOS.org
+  23:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * http://aws.amazon.com/freertos
+  24:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  *
+  25:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * 1 tab == 4 spaces!
+  26:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  */
+  27:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  28:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  29:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /*
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 2
+
+
+  30:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * The simplest possible implementation of pvPortMalloc().  Note that this
+  31:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * implementation does NOT allow allocated memory to be freed again.
+  32:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  *
+  33:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * See heap_2.c, heap_3.c and heap_4.c for alternative implementations, and the
+  34:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  * memory management pages of http://www.FreeRTOS.org for more information.
+  35:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c ****  */
+  36:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #include <stdlib.h>
+  37:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  38:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /* Defining MPU_WRAPPERS_INCLUDED_FROM_API_FILE prevents task.h from redefining
+  39:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** all the API functions to use the MPU wrappers.  That should only be done when
+  40:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** task.h is included from an application file. */
+  41:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #define MPU_WRAPPERS_INCLUDED_FROM_API_FILE
+  42:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  43:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #include "FreeRTOS.h"
+  44:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #include "task.h"
+  45:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  46:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #undef MPU_WRAPPERS_INCLUDED_FROM_API_FILE
+  47:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  48:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #if( configSUPPORT_DYNAMIC_ALLOCATION == 0 )
+  49:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	#error This file must not be used if configSUPPORT_DYNAMIC_ALLOCATION is 0
+  50:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #endif
+  51:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  52:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /* A few bytes might be lost to byte aligning the heap start address. */
+  53:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #define configADJUSTED_HEAP_SIZE	( configTOTAL_HEAP_SIZE - portBYTE_ALIGNMENT )
+  54:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  55:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /* Allocate the memory for the heap. */
+  56:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /* Allocate the memory for the heap. */
+  57:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #if( configAPPLICATION_ALLOCATED_HEAP == 1 )
+  58:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	/* The application writer has already defined the array used for the RTOS
+  59:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	heap - probably so it can be placed in a special segment or address. */
+  60:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	extern uint8_t ucHeap[ configTOTAL_HEAP_SIZE ];
+  61:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #else
+  62:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	static uint8_t ucHeap[ configTOTAL_HEAP_SIZE ];
+  63:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** #endif /* configAPPLICATION_ALLOCATED_HEAP */
+  64:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  65:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /* Index into the ucHeap array. */
+  66:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** static size_t xNextFreeByte = ( size_t ) 0;
+  67:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  68:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /*-----------------------------------------------------------*/
+  69:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  70:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** void *pvPortMalloc( size_t xWantedSize )
+  71:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** {
+  29              		.loc 1 71 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33              	.LVL0:
+  34 0000 38B5     		push	{r3, r4, r5, lr}
+  35              		.cfi_def_cfa_offset 16
+  36              		.cfi_offset 3, -16
+  37              		.cfi_offset 4, -12
+  38              		.cfi_offset 5, -8
+  39              		.cfi_offset 14, -4
+  40 0002 0446     		mov	r4, r0
+  41              	.LVL1:
+  72:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** void *pvReturn = NULL;
+  73:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** static uint8_t *pucAlignedHeap = NULL;
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 3
+
+
+  74:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  75:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	/* Ensure that blocks are always aligned to the required number of bytes. */
+  76:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	#if( portBYTE_ALIGNMENT != 1 )
+  77:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	{
+  78:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		if( xWantedSize & portBYTE_ALIGNMENT_MASK )
+  42              		.loc 1 78 0
+  43 0004 10F0070F 		tst	r0, #7
+  44 0008 02D0     		beq	.L2
+  79:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		{
+  80:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			/* Byte alignment required. */
+  81:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			xWantedSize += ( portBYTE_ALIGNMENT - ( xWantedSize & portBYTE_ALIGNMENT_MASK ) );
+  45              		.loc 1 81 0
+  46 000a 20F00704 		bic	r4, r0, #7
+  47 000e 0834     		adds	r4, r4, #8
+  48              	.LVL2:
+  49              	.L2:
+  82:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		}
+  83:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	}
+  84:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	#endif
+  85:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  86:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	vTaskSuspendAll();
+  50              		.loc 1 86 0
+  51 0010 FFF7FEFF 		bl	vTaskSuspendAll
+  52              	.LVL3:
+  87:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	{
+  88:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		if( pucAlignedHeap == NULL )
+  53              		.loc 1 88 0
+  54 0014 114B     		ldr	r3, .L9
+  55 0016 1B68     		ldr	r3, [r3]
+  56 0018 2BB9     		cbnz	r3, .L3
+  89:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		{
+  90:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			/* Ensure the heap starts on a correctly aligned boundary. */
+  91:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			pucAlignedHeap = ( uint8_t * ) ( ( ( portPOINTER_SIZE_TYPE ) &ucHeap[ portBYTE_ALIGNMENT ] ) & (
+  57              		.loc 1 91 0
+  58 001a 104A     		ldr	r2, .L9
+  59 001c 02F10C03 		add	r3, r2, #12
+  60 0020 23F00703 		bic	r3, r3, #7
+  61 0024 1360     		str	r3, [r2]
+  62              	.L3:
+  92:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		}
+  93:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+  94:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		/* Check there is enough room left for the allocation. */
+  95:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		if( ( ( xNextFreeByte + xWantedSize ) < configADJUSTED_HEAP_SIZE ) &&
+  63              		.loc 1 95 0
+  64 0026 0E4B     		ldr	r3, .L9+4
+  65 0028 D3F81436 		ldr	r3, [r3, #1556]
+  66 002c 1C44     		add	r4, r4, r3
+  67              	.LVL4:
+  68 002e 42F2F772 		movw	r2, #10231
+  69 0032 9442     		cmp	r4, r2
+  70 0034 08D8     		bhi	.L6
+  71              		.loc 1 95 0 is_stmt 0 discriminator 1
+  72 0036 A342     		cmp	r3, r4
+  73 0038 08D2     		bcs	.L7
+  96:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			( ( xNextFreeByte + xWantedSize ) > xNextFreeByte )	)/* Check for overflow. */
+  97:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		{
+  98:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			/* Return the next free byte then increment the index past this
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 4
+
+
+  99:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			block. */
+ 100:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			pvReturn = pucAlignedHeap + xNextFreeByte;
+  74              		.loc 1 100 0 is_stmt 1
+  75 003a 084A     		ldr	r2, .L9
+  76 003c 1568     		ldr	r5, [r2]
+  77 003e 1D44     		add	r5, r5, r3
+  78              	.LVL5:
+ 101:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			xNextFreeByte += xWantedSize;
+  79              		.loc 1 101 0
+  80 0040 074B     		ldr	r3, .L9+4
+  81 0042 C3F81446 		str	r4, [r3, #1556]
+  82 0046 02E0     		b	.L4
+  83              	.LVL6:
+  84              	.L6:
+  72:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** static uint8_t *pucAlignedHeap = NULL;
+  85              		.loc 1 72 0
+  86 0048 0025     		movs	r5, #0
+  87 004a 00E0     		b	.L4
+  88              	.L7:
+  89 004c 0025     		movs	r5, #0
+  90              	.LVL7:
+  91              	.L4:
+ 102:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		}
+ 103:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+ 104:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		traceMALLOC( pvReturn, xWantedSize );
+ 105:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	}
+ 106:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	( void ) xTaskResumeAll();
+  92              		.loc 1 106 0
+  93 004e FFF7FEFF 		bl	xTaskResumeAll
+  94              	.LVL8:
+ 107:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+ 108:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	#if( configUSE_MALLOC_FAILED_HOOK == 1 )
+ 109:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	{
+ 110:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		if( pvReturn == NULL )
+  95              		.loc 1 110 0
+  96 0052 0DB9     		cbnz	r5, .L5
+  97              	.LBB4:
+ 111:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		{
+ 112:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			extern void vApplicationMallocFailedHook( void );
+ 113:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 			vApplicationMallocFailedHook();
+  98              		.loc 1 113 0
+  99 0054 FFF7FEFF 		bl	vApplicationMallocFailedHook
+ 100              	.LVL9:
+ 101              	.L5:
+ 102              	.LBE4:
+ 114:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 		}
+ 115:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	}
+ 116:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	#endif
+ 117:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+ 118:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	return pvReturn;
+ 119:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** }
+ 103              		.loc 1 119 0
+ 104 0058 2846     		mov	r0, r5
+ 105 005a 38BD     		pop	{r3, r4, r5, pc}
+ 106              	.LVL10:
+ 107              	.L10:
+ 108              		.align	2
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 5
+
+
+ 109              	.L9:
+ 110 005c 00000000 		.word	.LANCHOR0
+ 111 0060 F0210000 		.word	.LANCHOR1
+ 112              		.cfi_endproc
+ 113              	.LFE512:
+ 114              		.size	pvPortMalloc, .-pvPortMalloc
+ 115              		.section	.text.vPortFree,"ax",%progbits
+ 116              		.align	2
+ 117              		.global	vPortFree
+ 118              		.thumb
+ 119              		.thumb_func
+ 120              		.type	vPortFree, %function
+ 121              	vPortFree:
+ 122              	.LFB513:
+ 120:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /*-----------------------------------------------------------*/
+ 121:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+ 122:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** void vPortFree( void *pv )
+ 123:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** {
+ 123              		.loc 1 123 0
+ 124              		.cfi_startproc
+ 125              		@ args = 0, pretend = 0, frame = 0
+ 126              		@ frame_needed = 0, uses_anonymous_args = 0
+ 127              		@ link register save eliminated.
+ 128              	.LVL11:
+ 124:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	/* Memory cannot be freed using this scheme.  See heap_2.c, heap_3.c and
+ 125:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	heap_4.c for alternative implementations, and the memory management pages of
+ 126:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	http://www.FreeRTOS.org for more information. */
+ 127:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	( void ) pv;
+ 128:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+ 129:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	/* Force an assert as it is invalid to call this function. */
+ 130:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	configASSERT( pv == NULL );
+ 129              		.loc 1 130 0
+ 130 0000 40B1     		cbz	r0, .L11
+ 131              	.LBB5:
+ 132              	.LBB6:
+ 133              		.file 2 "Generated_Source\\PSoC6\\pdl\\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h"
+   1:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*
+   2:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * FreeRTOS Kernel V10.0.1
+   3:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+   4:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *
+   5:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * Permission is hereby granted, free of charge, to any person obtaining a copy of
+   6:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * this software and associated documentation files (the "Software"), to deal in
+   7:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * the Software without restriction, including without limitation the rights to
+   8:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+   9:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * the Software, and to permit persons to whom the Software is furnished to do so,
+  10:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * subject to the following conditions:
+  11:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *
+  12:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * The above copyright notice and this permission notice shall be included in all
+  13:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * copies or substantial portions of the Software.
+  14:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *
+  15:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  16:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  17:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  18:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  19:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  20:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  21:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 6
+
+
+  22:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * http://www.FreeRTOS.org
+  23:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * http://aws.amazon.com/freertos
+  24:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *
+  25:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * 1 tab == 4 spaces!
+  26:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  */
+  27:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  28:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  29:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #ifndef PORTMACRO_H
+  30:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define PORTMACRO_H
+  31:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  32:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #ifdef __cplusplus
+  33:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** extern "C" {
+  34:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #endif
+  35:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  36:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*-----------------------------------------------------------
+  37:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * Port specific definitions.
+  38:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *
+  39:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * The settings in this file configure FreeRTOS correctly for the
+  40:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * given hardware and compiler.
+  41:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *
+  42:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  * These settings should not be altered.
+  43:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  *-----------------------------------------------------------
+  44:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h ****  */
+  45:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  46:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /* Type definitions. */
+  47:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portCHAR		char
+  48:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portFLOAT		float
+  49:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portDOUBLE		double
+  50:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portLONG		long
+  51:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portSHORT		short
+  52:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portSTACK_TYPE	uint32_t
+  53:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portBASE_TYPE	long
+  54:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  55:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** typedef portSTACK_TYPE StackType_t;
+  56:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** typedef long BaseType_t;
+  57:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** typedef unsigned long UBaseType_t;
+  58:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  59:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #if( configUSE_16_BIT_TICKS == 1 )
+  60:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	typedef uint16_t TickType_t;
+  61:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	#define portMAX_DELAY ( TickType_t ) 0xffff
+  62:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #else
+  63:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	typedef uint32_t TickType_t;
+  64:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	#define portMAX_DELAY ( TickType_t ) 0xffffffffUL
+  65:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  66:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	/* 32-bit tick type on a 32-bit architecture, so reads of the tick count do
+  67:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	not need to be guarded with a critical section. */
+  68:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	#define portTICK_TYPE_IS_ATOMIC 1
+  69:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #endif
+  70:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*-----------------------------------------------------------*/
+  71:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  72:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /* Architecture specifics. */
+  73:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portSTACK_GROWTH			( -1 )
+  74:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portTICK_PERIOD_MS			( ( TickType_t ) 1000 / configTICK_RATE_HZ )
+  75:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portBYTE_ALIGNMENT			8
+  76:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*-----------------------------------------------------------*/
+  77:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  78:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /* Scheduler utilities. */
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 7
+
+
+  79:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portYIELD() 															\
+  80:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** {																				\
+  81:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	/* Set a PendSV to request a context switch. */								\
+  82:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT;								\
+  83:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 																				\
+  84:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	/* Barriers are normally not required but do ensure the code is completely	\
+  85:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	within the specified behaviour for the architecture. */						\
+  86:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	__asm volatile( "dsb" ::: "memory" );										\
+  87:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	__asm volatile( "isb" );													\
+  88:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** }
+  89:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  90:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portNVIC_INT_CTRL_REG		( * ( ( volatile uint32_t * ) 0xe000ed04 ) )
+  91:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portNVIC_PENDSVSET_BIT		( 1UL << 28UL )
+  92:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portEND_SWITCHING_ISR( xSwitchRequired ) if( xSwitchRequired != pdFALSE ) portYIELD()
+  93:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portYIELD_FROM_ISR( x ) portEND_SWITCHING_ISR( x )
+  94:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*-----------------------------------------------------------*/
+  95:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+  96:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /* Critical section management. */
+  97:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** extern void vPortEnterCritical( void );
+  98:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** extern void vPortExitCritical( void );
+  99:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portSET_INTERRUPT_MASK_FROM_ISR()		ulPortRaiseBASEPRI()
+ 100:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portCLEAR_INTERRUPT_MASK_FROM_ISR(x)	vPortSetBASEPRI(x)
+ 101:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portDISABLE_INTERRUPTS()				vPortRaiseBASEPRI()
+ 102:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portENABLE_INTERRUPTS()					vPortSetBASEPRI(0)
+ 103:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portENTER_CRITICAL()					vPortEnterCritical()
+ 104:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portEXIT_CRITICAL()						vPortExitCritical()
+ 105:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 106:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*-----------------------------------------------------------*/
+ 107:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 108:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /* Task function macros as described on the FreeRTOS.org WEB site.  These are
+ 109:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** not necessary for to use this port.  They are defined so the common demo files
+ 110:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** (which build with all the ports) will build. */
+ 111:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portTASK_FUNCTION_PROTO( vFunction, pvParameters ) void vFunction( void *pvParameters )
+ 112:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portTASK_FUNCTION( vFunction, pvParameters ) void vFunction( void *pvParameters )
+ 113:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 114:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*-----------------------------------------------------------*/
+ 115:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 116:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #ifdef configASSERT
+ 117:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	void vPortValidateInterruptPriority( void );
+ 118:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	#define portASSERT_IF_INTERRUPT_PRIORITY_INVALID() 	vPortValidateInterruptPriority()
+ 119:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #endif
+ 120:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 121:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /* portNOP() is not required by this port. */
+ 122:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portNOP()
+ 123:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 124:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #define portINLINE	__inline
+ 125:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 126:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #ifndef portFORCE_INLINE
+ 127:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	#define portFORCE_INLINE inline __attribute__(( always_inline))
+ 128:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** #endif
+ 129:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 130:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** portFORCE_INLINE static BaseType_t xPortIsInsideInterrupt( void )
+ 131:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** {
+ 132:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** uint32_t ulCurrentInterrupt;
+ 133:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** BaseType_t xReturn;
+ 134:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 135:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	/* Obtain the number of the currently executing interrupt. */
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 8
+
+
+ 136:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	__asm volatile( "mrs %0, ipsr" : "=r"( ulCurrentInterrupt ) :: "memory" );
+ 137:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 138:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	if( ulCurrentInterrupt == 0 )
+ 139:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	{
+ 140:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 		xReturn = pdFALSE;
+ 141:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	}
+ 142:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	else
+ 143:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	{
+ 144:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 		xReturn = pdTRUE;
+ 145:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	}
+ 146:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 147:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	return xReturn;
+ 148:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** }
+ 149:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 150:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** /*-----------------------------------------------------------*/
+ 151:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 152:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** portFORCE_INLINE static void vPortRaiseBASEPRI( void )
+ 153:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** {
+ 154:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** uint32_t ulNewBASEPRI;
+ 155:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 
+ 156:Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h **** 	__asm volatile
+ 134              		.loc 2 156 0
+ 135              		.syntax unified
+ 136              	@ 156 "Generated_Source\PSoC6\pdl\rtos/FreeRTOS/10.0.1/Source/portable/GCC/CM4F/portmacro.h" 1
+ 137 0002 4FF0BF03 			mov r3, #191												
+ 138 0006 83F31188 		msr basepri, r3											
+ 139 000a BFF36F8F 		isb														
+ 140 000e BFF34F8F 		dsb														
+ 141              	
+ 142              	@ 0 "" 2
+ 143              	.LVL12:
+ 144              		.thumb
+ 145              		.syntax unified
+ 146              	.L13:
+ 147 0012 FEE7     		b	.L13
+ 148              	.L11:
+ 149 0014 7047     		bx	lr
+ 150              	.LBE6:
+ 151              	.LBE5:
+ 152              		.cfi_endproc
+ 153              	.LFE513:
+ 154              		.size	vPortFree, .-vPortFree
+ 155 0016 00BF     		.section	.text.vPortInitialiseBlocks,"ax",%progbits
+ 156              		.align	2
+ 157              		.global	vPortInitialiseBlocks
+ 158              		.thumb
+ 159              		.thumb_func
+ 160              		.type	vPortInitialiseBlocks, %function
+ 161              	vPortInitialiseBlocks:
+ 162              	.LFB514:
+ 131:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** }
+ 132:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /*-----------------------------------------------------------*/
+ 133:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+ 134:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** void vPortInitialiseBlocks( void )
+ 135:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** {
+ 163              		.loc 1 135 0
+ 164              		.cfi_startproc
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 9
+
+
+ 165              		@ args = 0, pretend = 0, frame = 0
+ 166              		@ frame_needed = 0, uses_anonymous_args = 0
+ 167              		@ link register save eliminated.
+ 136:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	/* Only required when static memory is not cleared. */
+ 137:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	xNextFreeByte = ( size_t ) 0;
+ 168              		.loc 1 137 0
+ 169 0000 0022     		movs	r2, #0
+ 170 0002 024B     		ldr	r3, .L15
+ 171 0004 C3F81426 		str	r2, [r3, #1556]
+ 172 0008 7047     		bx	lr
+ 173              	.L16:
+ 174 000a 00BF     		.align	2
+ 175              	.L15:
+ 176 000c F0210000 		.word	.LANCHOR1
+ 177              		.cfi_endproc
+ 178              	.LFE514:
+ 179              		.size	vPortInitialiseBlocks, .-vPortInitialiseBlocks
+ 180              		.section	.text.xPortGetFreeHeapSize,"ax",%progbits
+ 181              		.align	2
+ 182              		.global	xPortGetFreeHeapSize
+ 183              		.thumb
+ 184              		.thumb_func
+ 185              		.type	xPortGetFreeHeapSize, %function
+ 186              	xPortGetFreeHeapSize:
+ 187              	.LFB515:
+ 138:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** }
+ 139:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** /*-----------------------------------------------------------*/
+ 140:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 
+ 141:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** size_t xPortGetFreeHeapSize( void )
+ 142:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** {
+ 188              		.loc 1 142 0
+ 189              		.cfi_startproc
+ 190              		@ args = 0, pretend = 0, frame = 0
+ 191              		@ frame_needed = 0, uses_anonymous_args = 0
+ 192              		@ link register save eliminated.
+ 143:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** 	return ( configADJUSTED_HEAP_SIZE - xNextFreeByte );
+ 193              		.loc 1 143 0
+ 194 0000 034B     		ldr	r3, .L18
+ 195 0002 D3F81406 		ldr	r0, [r3, #1556]
+ 144:Generated_Source\PSoC6\pdl\rtos\FreeRTOS\10.0.1\Source\portable\MemMang/heap_1.c **** }
+ 196              		.loc 1 144 0
+ 197 0006 C0F51F50 		rsb	r0, r0, #10176
+ 198 000a 3830     		adds	r0, r0, #56
+ 199 000c 7047     		bx	lr
+ 200              	.L19:
+ 201 000e 00BF     		.align	2
+ 202              	.L18:
+ 203 0010 F0210000 		.word	.LANCHOR1
+ 204              		.cfi_endproc
+ 205              	.LFE515:
+ 206              		.size	xPortGetFreeHeapSize, .-xPortGetFreeHeapSize
+ 207              		.bss
+ 208              		.align	2
+ 209              		.set	.LANCHOR0,. + 0
+ 210              		.set	.LANCHOR1,. + 8688
+ 211              		.type	pucAlignedHeap.15934, %object
+ 212              		.size	pucAlignedHeap.15934, 4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 10
+
+
+ 213              	pucAlignedHeap.15934:
+ 214 0000 00000000 		.space	4
+ 215              		.type	ucHeap, %object
+ 216              		.size	ucHeap, 10240
+ 217              	ucHeap:
+ 218 0004 00000000 		.space	10240
+ 218      00000000 
+ 218      00000000 
+ 218      00000000 
+ 218      00000000 
+ 219              		.type	xNextFreeByte, %object
+ 220              		.size	xNextFreeByte, 4
+ 221              	xNextFreeByte:
+ 222 2804 00000000 		.space	4
+ 223              		.text
+ 224              	.Letext0:
+ 225              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 226              		.file 4 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 227              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+ 228              		.file 6 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/device/cy_device.h"
+ 229              		.file 7 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_i2c.h"
+ 230              		.file 8 "Generated_Source\\PSoC6\\pdl\\drivers/peripheral/scb/cy_scb_uart.h"
+ 231              		.file 9 "Generated_Source\\PSoC6\\pdl\\cmsis/include/core_cm4.h"
+ 232              		.file 10 "Generated_Source\\PSoC6/DEBUG_UART.h"
+ 233              		.file 11 "Generated_Source\\PSoC6/I2Cm.h"
+ 234              		.file 12 "Generated_Source\\PSoC6\\pdl\\rtos/FreeRTOS/10.0.1/Source/include/task.h"
+ 235              		.section	.debug_info,"",%progbits
+ 236              	.Ldebug_info0:
+ 237 0000 2F090000 		.4byte	0x92f
+ 238 0004 0400     		.2byte	0x4
+ 239 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 240 000a 04       		.byte	0x4
+ 241 000b 01       		.uleb128 0x1
+ 242 000c 6C060000 		.4byte	.LASF169
+ 243 0010 0C       		.byte	0xc
+ 244 0011 AE030000 		.4byte	.LASF170
+ 245 0015 AD0A0000 		.4byte	.LASF171
+ 246 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 247 001d 00000000 		.4byte	0
+ 248 0021 00000000 		.4byte	.Ldebug_line0
+ 249 0025 02       		.uleb128 0x2
+ 250 0026 43000000 		.4byte	.LASF4
+ 251 002a 03       		.byte	0x3
+ 252 002b D8       		.byte	0xd8
+ 253 002c 30000000 		.4byte	0x30
+ 254 0030 03       		.uleb128 0x3
+ 255 0031 04       		.byte	0x4
+ 256 0032 07       		.byte	0x7
+ 257 0033 A1030000 		.4byte	.LASF0
+ 258 0037 04       		.uleb128 0x4
+ 259 0038 04       		.byte	0x4
+ 260 0039 05       		.byte	0x5
+ 261 003a 696E7400 		.ascii	"int\000"
+ 262 003e 03       		.uleb128 0x3
+ 263 003f 08       		.byte	0x8
+ 264 0040 05       		.byte	0x5
+ 265 0041 9A010000 		.4byte	.LASF1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 11
+
+
+ 266 0045 03       		.uleb128 0x3
+ 267 0046 08       		.byte	0x8
+ 268 0047 04       		.byte	0x4
+ 269 0048 D7080000 		.4byte	.LASF2
+ 270 004c 03       		.uleb128 0x3
+ 271 004d 01       		.byte	0x1
+ 272 004e 06       		.byte	0x6
+ 273 004f A8010000 		.4byte	.LASF3
+ 274 0053 02       		.uleb128 0x2
+ 275 0054 7B000000 		.4byte	.LASF5
+ 276 0058 04       		.byte	0x4
+ 277 0059 1D       		.byte	0x1d
+ 278 005a 5E000000 		.4byte	0x5e
+ 279 005e 03       		.uleb128 0x3
+ 280 005f 01       		.byte	0x1
+ 281 0060 08       		.byte	0x8
+ 282 0061 AE070000 		.4byte	.LASF6
+ 283 0065 02       		.uleb128 0x2
+ 284 0066 4F030000 		.4byte	.LASF7
+ 285 006a 04       		.byte	0x4
+ 286 006b 29       		.byte	0x29
+ 287 006c 70000000 		.4byte	0x70
+ 288 0070 03       		.uleb128 0x3
+ 289 0071 02       		.byte	0x2
+ 290 0072 05       		.byte	0x5
+ 291 0073 F9070000 		.4byte	.LASF8
+ 292 0077 02       		.uleb128 0x2
+ 293 0078 02090000 		.4byte	.LASF9
+ 294 007c 04       		.byte	0x4
+ 295 007d 2B       		.byte	0x2b
+ 296 007e 82000000 		.4byte	0x82
+ 297 0082 03       		.uleb128 0x3
+ 298 0083 02       		.byte	0x2
+ 299 0084 07       		.byte	0x7
+ 300 0085 79090000 		.4byte	.LASF10
+ 301 0089 02       		.uleb128 0x2
+ 302 008a 20090000 		.4byte	.LASF11
+ 303 008e 04       		.byte	0x4
+ 304 008f 3F       		.byte	0x3f
+ 305 0090 94000000 		.4byte	0x94
+ 306 0094 03       		.uleb128 0x3
+ 307 0095 04       		.byte	0x4
+ 308 0096 05       		.byte	0x5
+ 309 0097 41020000 		.4byte	.LASF12
+ 310 009b 02       		.uleb128 0x2
+ 311 009c 27030000 		.4byte	.LASF13
+ 312 00a0 04       		.byte	0x4
+ 313 00a1 41       		.byte	0x41
+ 314 00a2 A6000000 		.4byte	0xa6
+ 315 00a6 03       		.uleb128 0x3
+ 316 00a7 04       		.byte	0x4
+ 317 00a8 07       		.byte	0x7
+ 318 00a9 5D040000 		.4byte	.LASF14
+ 319 00ad 03       		.uleb128 0x3
+ 320 00ae 08       		.byte	0x8
+ 321 00af 07       		.byte	0x7
+ 322 00b0 E3000000 		.4byte	.LASF15
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 12
+
+
+ 323 00b4 03       		.uleb128 0x3
+ 324 00b5 04       		.byte	0x4
+ 325 00b6 07       		.byte	0x7
+ 326 00b7 C0050000 		.4byte	.LASF16
+ 327 00bb 05       		.uleb128 0x5
+ 328 00bc 04       		.byte	0x4
+ 329 00bd 03       		.uleb128 0x3
+ 330 00be 01       		.byte	0x1
+ 331 00bf 08       		.byte	0x8
+ 332 00c0 E3080000 		.4byte	.LASF17
+ 333 00c4 02       		.uleb128 0x2
+ 334 00c5 6D0A0000 		.4byte	.LASF18
+ 335 00c9 05       		.byte	0x5
+ 336 00ca 18       		.byte	0x18
+ 337 00cb 53000000 		.4byte	0x53
+ 338 00cf 02       		.uleb128 0x2
+ 339 00d0 92010000 		.4byte	.LASF19
+ 340 00d4 05       		.byte	0x5
+ 341 00d5 20       		.byte	0x20
+ 342 00d6 65000000 		.4byte	0x65
+ 343 00da 02       		.uleb128 0x2
+ 344 00db 10040000 		.4byte	.LASF20
+ 345 00df 05       		.byte	0x5
+ 346 00e0 24       		.byte	0x24
+ 347 00e1 77000000 		.4byte	0x77
+ 348 00e5 02       		.uleb128 0x2
+ 349 00e6 A6070000 		.4byte	.LASF21
+ 350 00ea 05       		.byte	0x5
+ 351 00eb 2C       		.byte	0x2c
+ 352 00ec 89000000 		.4byte	0x89
+ 353 00f0 02       		.uleb128 0x2
+ 354 00f1 A5080000 		.4byte	.LASF22
+ 355 00f5 05       		.byte	0x5
+ 356 00f6 30       		.byte	0x30
+ 357 00f7 9B000000 		.4byte	0x9b
+ 358 00fb 06       		.uleb128 0x6
+ 359 00fc F0000000 		.4byte	0xf0
+ 360 0100 07       		.uleb128 0x7
+ 361 0101 B8       		.byte	0xb8
+ 362 0102 06       		.byte	0x6
+ 363 0103 34       		.byte	0x34
+ 364 0104 11050000 		.4byte	0x511
+ 365 0108 08       		.uleb128 0x8
+ 366 0109 BD000000 		.4byte	.LASF23
+ 367 010d 06       		.byte	0x6
+ 368 010e 37       		.byte	0x37
+ 369 010f F0000000 		.4byte	0xf0
+ 370 0113 00       		.byte	0
+ 371 0114 08       		.uleb128 0x8
+ 372 0115 1C030000 		.4byte	.LASF24
+ 373 0119 06       		.byte	0x6
+ 374 011a 38       		.byte	0x38
+ 375 011b F0000000 		.4byte	0xf0
+ 376 011f 04       		.byte	0x4
+ 377 0120 08       		.uleb128 0x8
+ 378 0121 A3020000 		.4byte	.LASF25
+ 379 0125 06       		.byte	0x6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 13
+
+
+ 380 0126 39       		.byte	0x39
+ 381 0127 F0000000 		.4byte	0xf0
+ 382 012b 08       		.byte	0x8
+ 383 012c 08       		.uleb128 0x8
+ 384 012d 89070000 		.4byte	.LASF26
+ 385 0131 06       		.byte	0x6
+ 386 0132 3A       		.byte	0x3a
+ 387 0133 F0000000 		.4byte	0xf0
+ 388 0137 0C       		.byte	0xc
+ 389 0138 08       		.uleb128 0x8
+ 390 0139 C9010000 		.4byte	.LASF27
+ 391 013d 06       		.byte	0x6
+ 392 013e 3B       		.byte	0x3b
+ 393 013f F0000000 		.4byte	0xf0
+ 394 0143 10       		.byte	0x10
+ 395 0144 08       		.uleb128 0x8
+ 396 0145 13020000 		.4byte	.LASF28
+ 397 0149 06       		.byte	0x6
+ 398 014a 3C       		.byte	0x3c
+ 399 014b F0000000 		.4byte	0xf0
+ 400 014f 14       		.byte	0x14
+ 401 0150 08       		.uleb128 0x8
+ 402 0151 A5040000 		.4byte	.LASF29
+ 403 0155 06       		.byte	0x6
+ 404 0156 3D       		.byte	0x3d
+ 405 0157 F0000000 		.4byte	0xf0
+ 406 015b 18       		.byte	0x18
+ 407 015c 08       		.uleb128 0x8
+ 408 015d 64000000 		.4byte	.LASF30
+ 409 0161 06       		.byte	0x6
+ 410 0162 3E       		.byte	0x3e
+ 411 0163 F0000000 		.4byte	0xf0
+ 412 0167 1C       		.byte	0x1c
+ 413 0168 08       		.uleb128 0x8
+ 414 0169 2F0B0000 		.4byte	.LASF31
+ 415 016d 06       		.byte	0x6
+ 416 016e 3F       		.byte	0x3f
+ 417 016f F0000000 		.4byte	0xf0
+ 418 0173 20       		.byte	0x20
+ 419 0174 08       		.uleb128 0x8
+ 420 0175 54060000 		.4byte	.LASF32
+ 421 0179 06       		.byte	0x6
+ 422 017a 40       		.byte	0x40
+ 423 017b F0000000 		.4byte	0xf0
+ 424 017f 24       		.byte	0x24
+ 425 0180 08       		.uleb128 0x8
+ 426 0181 92050000 		.4byte	.LASF33
+ 427 0185 06       		.byte	0x6
+ 428 0186 43       		.byte	0x43
+ 429 0187 C4000000 		.4byte	0xc4
+ 430 018b 28       		.byte	0x28
+ 431 018c 08       		.uleb128 0x8
+ 432 018d 4A000000 		.4byte	.LASF34
+ 433 0191 06       		.byte	0x6
+ 434 0192 44       		.byte	0x44
+ 435 0193 C4000000 		.4byte	0xc4
+ 436 0197 29       		.byte	0x29
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 14
+
+
+ 437 0198 08       		.uleb128 0x8
+ 438 0199 250B0000 		.4byte	.LASF35
+ 439 019d 06       		.byte	0x6
+ 440 019e 45       		.byte	0x45
+ 441 019f C4000000 		.4byte	0xc4
+ 442 01a3 2A       		.byte	0x2a
+ 443 01a4 08       		.uleb128 0x8
+ 444 01a5 46060000 		.4byte	.LASF36
+ 445 01a9 06       		.byte	0x6
+ 446 01aa 46       		.byte	0x46
+ 447 01ab C4000000 		.4byte	0xc4
+ 448 01af 2B       		.byte	0x2b
+ 449 01b0 08       		.uleb128 0x8
+ 450 01b1 FF040000 		.4byte	.LASF37
+ 451 01b5 06       		.byte	0x6
+ 452 01b6 47       		.byte	0x47
+ 453 01b7 C4000000 		.4byte	0xc4
+ 454 01bb 2C       		.byte	0x2c
+ 455 01bc 08       		.uleb128 0x8
+ 456 01bd 37090000 		.4byte	.LASF38
+ 457 01c1 06       		.byte	0x6
+ 458 01c2 48       		.byte	0x48
+ 459 01c3 C4000000 		.4byte	0xc4
+ 460 01c7 2D       		.byte	0x2d
+ 461 01c8 08       		.uleb128 0x8
+ 462 01c9 D2010000 		.4byte	.LASF39
+ 463 01cd 06       		.byte	0x6
+ 464 01ce 49       		.byte	0x49
+ 465 01cf C4000000 		.4byte	0xc4
+ 466 01d3 2E       		.byte	0x2e
+ 467 01d4 08       		.uleb128 0x8
+ 468 01d5 9F050000 		.4byte	.LASF40
+ 469 01d9 06       		.byte	0x6
+ 470 01da 4A       		.byte	0x4a
+ 471 01db C4000000 		.4byte	0xc4
+ 472 01df 2F       		.byte	0x2f
+ 473 01e0 08       		.uleb128 0x8
+ 474 01e1 E8080000 		.4byte	.LASF41
+ 475 01e5 06       		.byte	0x6
+ 476 01e6 4B       		.byte	0x4b
+ 477 01e7 C4000000 		.4byte	0xc4
+ 478 01eb 30       		.byte	0x30
+ 479 01ec 08       		.uleb128 0x8
+ 480 01ed 8E040000 		.4byte	.LASF42
+ 481 01f1 06       		.byte	0x6
+ 482 01f2 4E       		.byte	0x4e
+ 483 01f3 C4000000 		.4byte	0xc4
+ 484 01f7 31       		.byte	0x31
+ 485 01f8 08       		.uleb128 0x8
+ 486 01f9 6D000000 		.4byte	.LASF43
+ 487 01fd 06       		.byte	0x6
+ 488 01fe 4F       		.byte	0x4f
+ 489 01ff C4000000 		.4byte	0xc4
+ 490 0203 32       		.byte	0x32
+ 491 0204 08       		.uleb128 0x8
+ 492 0205 95030000 		.4byte	.LASF44
+ 493 0209 06       		.byte	0x6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 15
+
+
+ 494 020a 50       		.byte	0x50
+ 495 020b C4000000 		.4byte	0xc4
+ 496 020f 33       		.byte	0x33
+ 497 0210 08       		.uleb128 0x8
+ 498 0211 E4050000 		.4byte	.LASF45
+ 499 0215 06       		.byte	0x6
+ 500 0216 51       		.byte	0x51
+ 501 0217 C4000000 		.4byte	0xc4
+ 502 021b 34       		.byte	0x34
+ 503 021c 08       		.uleb128 0x8
+ 504 021d AD090000 		.4byte	.LASF46
+ 505 0221 06       		.byte	0x6
+ 506 0222 52       		.byte	0x52
+ 507 0223 CF000000 		.4byte	0xcf
+ 508 0227 36       		.byte	0x36
+ 509 0228 08       		.uleb128 0x8
+ 510 0229 BD020000 		.4byte	.LASF47
+ 511 022d 06       		.byte	0x6
+ 512 022e 53       		.byte	0x53
+ 513 022f CF000000 		.4byte	0xcf
+ 514 0233 38       		.byte	0x38
+ 515 0234 08       		.uleb128 0x8
+ 516 0235 56090000 		.4byte	.LASF48
+ 517 0239 06       		.byte	0x6
+ 518 023a 54       		.byte	0x54
+ 519 023b CF000000 		.4byte	0xcf
+ 520 023f 3A       		.byte	0x3a
+ 521 0240 08       		.uleb128 0x8
+ 522 0241 04020000 		.4byte	.LASF49
+ 523 0245 06       		.byte	0x6
+ 524 0246 55       		.byte	0x55
+ 525 0247 C4000000 		.4byte	0xc4
+ 526 024b 3C       		.byte	0x3c
+ 527 024c 08       		.uleb128 0x8
+ 528 024d E4020000 		.4byte	.LASF50
+ 529 0251 06       		.byte	0x6
+ 530 0252 56       		.byte	0x56
+ 531 0253 C4000000 		.4byte	0xc4
+ 532 0257 3D       		.byte	0x3d
+ 533 0258 08       		.uleb128 0x8
+ 534 0259 130A0000 		.4byte	.LASF51
+ 535 025d 06       		.byte	0x6
+ 536 025e 57       		.byte	0x57
+ 537 025f C4000000 		.4byte	0xc4
+ 538 0263 3E       		.byte	0x3e
+ 539 0264 08       		.uleb128 0x8
+ 540 0265 58000000 		.4byte	.LASF52
+ 541 0269 06       		.byte	0x6
+ 542 026a 58       		.byte	0x58
+ 543 026b C4000000 		.4byte	0xc4
+ 544 026f 3F       		.byte	0x3f
+ 545 0270 08       		.uleb128 0x8
+ 546 0271 5F060000 		.4byte	.LASF53
+ 547 0275 06       		.byte	0x6
+ 548 0276 59       		.byte	0x59
+ 549 0277 C4000000 		.4byte	0xc4
+ 550 027b 40       		.byte	0x40
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 16
+
+
+ 551 027c 08       		.uleb128 0x8
+ 552 027d 32030000 		.4byte	.LASF54
+ 553 0281 06       		.byte	0x6
+ 554 0282 5A       		.byte	0x5a
+ 555 0283 C4000000 		.4byte	0xc4
+ 556 0287 41       		.byte	0x41
+ 557 0288 08       		.uleb128 0x8
+ 558 0289 3D050000 		.4byte	.LASF55
+ 559 028d 06       		.byte	0x6
+ 560 028e 5B       		.byte	0x5b
+ 561 028f C4000000 		.4byte	0xc4
+ 562 0293 42       		.byte	0x42
+ 563 0294 08       		.uleb128 0x8
+ 564 0295 2B060000 		.4byte	.LASF56
+ 565 0299 06       		.byte	0x6
+ 566 029a 5C       		.byte	0x5c
+ 567 029b C4000000 		.4byte	0xc4
+ 568 029f 43       		.byte	0x43
+ 569 02a0 08       		.uleb128 0x8
+ 570 02a1 AC020000 		.4byte	.LASF57
+ 571 02a5 06       		.byte	0x6
+ 572 02a6 5D       		.byte	0x5d
+ 573 02a7 C4000000 		.4byte	0xc4
+ 574 02ab 44       		.byte	0x44
+ 575 02ac 08       		.uleb128 0x8
+ 576 02ad 00000000 		.4byte	.LASF58
+ 577 02b1 06       		.byte	0x6
+ 578 02b2 5E       		.byte	0x5e
+ 579 02b3 F0000000 		.4byte	0xf0
+ 580 02b7 48       		.byte	0x48
+ 581 02b8 08       		.uleb128 0x8
+ 582 02b9 95020000 		.4byte	.LASF59
+ 583 02bd 06       		.byte	0x6
+ 584 02be 5F       		.byte	0x5f
+ 585 02bf F0000000 		.4byte	0xf0
+ 586 02c3 4C       		.byte	0x4c
+ 587 02c4 08       		.uleb128 0x8
+ 588 02c5 650B0000 		.4byte	.LASF60
+ 589 02c9 06       		.byte	0x6
+ 590 02ca 60       		.byte	0x60
+ 591 02cb C4000000 		.4byte	0xc4
+ 592 02cf 50       		.byte	0x50
+ 593 02d0 08       		.uleb128 0x8
+ 594 02d1 44010000 		.4byte	.LASF61
+ 595 02d5 06       		.byte	0x6
+ 596 02d6 61       		.byte	0x61
+ 597 02d7 C4000000 		.4byte	0xc4
+ 598 02db 51       		.byte	0x51
+ 599 02dc 08       		.uleb128 0x8
+ 600 02dd 5D0A0000 		.4byte	.LASF62
+ 601 02e1 06       		.byte	0x6
+ 602 02e2 62       		.byte	0x62
+ 603 02e3 C4000000 		.4byte	0xc4
+ 604 02e7 52       		.byte	0x52
+ 605 02e8 08       		.uleb128 0x8
+ 606 02e9 44090000 		.4byte	.LASF63
+ 607 02ed 06       		.byte	0x6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 17
+
+
+ 608 02ee 63       		.byte	0x63
+ 609 02ef C4000000 		.4byte	0xc4
+ 610 02f3 53       		.byte	0x53
+ 611 02f4 08       		.uleb128 0x8
+ 612 02f5 95080000 		.4byte	.LASF64
+ 613 02f9 06       		.byte	0x6
+ 614 02fa 64       		.byte	0x64
+ 615 02fb C4000000 		.4byte	0xc4
+ 616 02ff 54       		.byte	0x54
+ 617 0300 08       		.uleb128 0x8
+ 618 0301 7E010000 		.4byte	.LASF65
+ 619 0305 06       		.byte	0x6
+ 620 0306 65       		.byte	0x65
+ 621 0307 C4000000 		.4byte	0xc4
+ 622 030b 55       		.byte	0x55
+ 623 030c 08       		.uleb128 0x8
+ 624 030d 49040000 		.4byte	.LASF66
+ 625 0311 06       		.byte	0x6
+ 626 0312 66       		.byte	0x66
+ 627 0313 C4000000 		.4byte	0xc4
+ 628 0317 56       		.byte	0x56
+ 629 0318 08       		.uleb128 0x8
+ 630 0319 AE040000 		.4byte	.LASF67
+ 631 031d 06       		.byte	0x6
+ 632 031e 67       		.byte	0x67
+ 633 031f C4000000 		.4byte	0xc4
+ 634 0323 57       		.byte	0x57
+ 635 0324 08       		.uleb128 0x8
+ 636 0325 1C000000 		.4byte	.LASF68
+ 637 0329 06       		.byte	0x6
+ 638 032a 68       		.byte	0x68
+ 639 032b C4000000 		.4byte	0xc4
+ 640 032f 58       		.byte	0x58
+ 641 0330 08       		.uleb128 0x8
+ 642 0331 D1070000 		.4byte	.LASF69
+ 643 0335 06       		.byte	0x6
+ 644 0336 69       		.byte	0x69
+ 645 0337 C4000000 		.4byte	0xc4
+ 646 033b 59       		.byte	0x59
+ 647 033c 08       		.uleb128 0x8
+ 648 033d C9050000 		.4byte	.LASF70
+ 649 0341 06       		.byte	0x6
+ 650 0342 6E       		.byte	0x6e
+ 651 0343 DA000000 		.4byte	0xda
+ 652 0347 5A       		.byte	0x5a
+ 653 0348 08       		.uleb128 0x8
+ 654 0349 8C090000 		.4byte	.LASF71
+ 655 034d 06       		.byte	0x6
+ 656 034e 6F       		.byte	0x6f
+ 657 034f DA000000 		.4byte	0xda
+ 658 0353 5C       		.byte	0x5c
+ 659 0354 08       		.uleb128 0x8
+ 660 0355 C7000000 		.4byte	.LASF72
+ 661 0359 06       		.byte	0x6
+ 662 035a 70       		.byte	0x70
+ 663 035b C4000000 		.4byte	0xc4
+ 664 035f 5E       		.byte	0x5e
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 18
+
+
+ 665 0360 08       		.uleb128 0x8
+ 666 0361 55070000 		.4byte	.LASF73
+ 667 0365 06       		.byte	0x6
+ 668 0366 71       		.byte	0x71
+ 669 0367 C4000000 		.4byte	0xc4
+ 670 036b 5F       		.byte	0x5f
+ 671 036c 08       		.uleb128 0x8
+ 672 036d 1A060000 		.4byte	.LASF74
+ 673 0371 06       		.byte	0x6
+ 674 0372 72       		.byte	0x72
+ 675 0373 C4000000 		.4byte	0xc4
+ 676 0377 60       		.byte	0x60
+ 677 0378 08       		.uleb128 0x8
+ 678 0379 25070000 		.4byte	.LASF75
+ 679 037d 06       		.byte	0x6
+ 680 037e 73       		.byte	0x73
+ 681 037f F0000000 		.4byte	0xf0
+ 682 0383 64       		.byte	0x64
+ 683 0384 08       		.uleb128 0x8
+ 684 0385 FA000000 		.4byte	.LASF76
+ 685 0389 06       		.byte	0x6
+ 686 038a 76       		.byte	0x76
+ 687 038b DA000000 		.4byte	0xda
+ 688 038f 68       		.byte	0x68
+ 689 0390 08       		.uleb128 0x8
+ 690 0391 37040000 		.4byte	.LASF77
+ 691 0395 06       		.byte	0x6
+ 692 0396 77       		.byte	0x77
+ 693 0397 DA000000 		.4byte	0xda
+ 694 039b 6A       		.byte	0x6a
+ 695 039c 08       		.uleb128 0x8
+ 696 039d CC040000 		.4byte	.LASF78
+ 697 03a1 06       		.byte	0x6
+ 698 03a2 78       		.byte	0x78
+ 699 03a3 DA000000 		.4byte	0xda
+ 700 03a7 6C       		.byte	0x6c
+ 701 03a8 08       		.uleb128 0x8
+ 702 03a9 F2040000 		.4byte	.LASF79
+ 703 03ad 06       		.byte	0x6
+ 704 03ae 79       		.byte	0x79
+ 705 03af DA000000 		.4byte	0xda
+ 706 03b3 6E       		.byte	0x6e
+ 707 03b4 08       		.uleb128 0x8
+ 708 03b5 39080000 		.4byte	.LASF80
+ 709 03b9 06       		.byte	0x6
+ 710 03ba 7B       		.byte	0x7b
+ 711 03bb C4000000 		.4byte	0xc4
+ 712 03bf 70       		.byte	0x70
+ 713 03c0 08       		.uleb128 0x8
+ 714 03c1 B4010000 		.4byte	.LASF81
+ 715 03c5 06       		.byte	0x6
+ 716 03c6 7C       		.byte	0x7c
+ 717 03c7 C4000000 		.4byte	0xc4
+ 718 03cb 71       		.byte	0x71
+ 719 03cc 08       		.uleb128 0x8
+ 720 03cd 370B0000 		.4byte	.LASF82
+ 721 03d1 06       		.byte	0x6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 19
+
+
+ 722 03d2 7D       		.byte	0x7d
+ 723 03d3 C4000000 		.4byte	0xc4
+ 724 03d7 72       		.byte	0x72
+ 725 03d8 08       		.uleb128 0x8
+ 726 03d9 F5050000 		.4byte	.LASF83
+ 727 03dd 06       		.byte	0x6
+ 728 03de 7E       		.byte	0x7e
+ 729 03df C4000000 		.4byte	0xc4
+ 730 03e3 73       		.byte	0x73
+ 731 03e4 08       		.uleb128 0x8
+ 732 03e5 EF020000 		.4byte	.LASF84
+ 733 03e9 06       		.byte	0x6
+ 734 03ea 80       		.byte	0x80
+ 735 03eb DA000000 		.4byte	0xda
+ 736 03ef 74       		.byte	0x74
+ 737 03f0 08       		.uleb128 0x8
+ 738 03f1 0D090000 		.4byte	.LASF85
+ 739 03f5 06       		.byte	0x6
+ 740 03f6 81       		.byte	0x81
+ 741 03f7 DA000000 		.4byte	0xda
+ 742 03fb 76       		.byte	0x76
+ 743 03fc 08       		.uleb128 0x8
+ 744 03fd CF020000 		.4byte	.LASF86
+ 745 0401 06       		.byte	0x6
+ 746 0402 82       		.byte	0x82
+ 747 0403 DA000000 		.4byte	0xda
+ 748 0407 78       		.byte	0x78
+ 749 0408 08       		.uleb128 0x8
+ 750 0409 91000000 		.4byte	.LASF87
+ 751 040d 06       		.byte	0x6
+ 752 040e 83       		.byte	0x83
+ 753 040f DA000000 		.4byte	0xda
+ 754 0413 7A       		.byte	0x7a
+ 755 0414 08       		.uleb128 0x8
+ 756 0415 8A0A0000 		.4byte	.LASF88
+ 757 0419 06       		.byte	0x6
+ 758 041a 86       		.byte	0x86
+ 759 041b C4000000 		.4byte	0xc4
+ 760 041f 7C       		.byte	0x7c
+ 761 0420 08       		.uleb128 0x8
+ 762 0421 BA090000 		.4byte	.LASF89
+ 763 0425 06       		.byte	0x6
+ 764 0426 87       		.byte	0x87
+ 765 0427 C4000000 		.4byte	0xc4
+ 766 042b 7D       		.byte	0x7d
+ 767 042c 08       		.uleb128 0x8
+ 768 042d 30000000 		.4byte	.LASF90
+ 769 0431 06       		.byte	0x6
+ 770 0432 88       		.byte	0x88
+ 771 0433 C4000000 		.4byte	0xc4
+ 772 0437 7E       		.byte	0x7e
+ 773 0438 08       		.uleb128 0x8
+ 774 0439 01030000 		.4byte	.LASF91
+ 775 043d 06       		.byte	0x6
+ 776 043e 89       		.byte	0x89
+ 777 043f C4000000 		.4byte	0xc4
+ 778 0443 7F       		.byte	0x7f
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 20
+
+
+ 779 0444 08       		.uleb128 0x8
+ 780 0445 81030000 		.4byte	.LASF92
+ 781 0449 06       		.byte	0x6
+ 782 044a 8A       		.byte	0x8a
+ 783 044b C4000000 		.4byte	0xc4
+ 784 044f 80       		.byte	0x80
+ 785 0450 08       		.uleb128 0x8
+ 786 0451 7B050000 		.4byte	.LASF93
+ 787 0455 06       		.byte	0x6
+ 788 0456 8D       		.byte	0x8d
+ 789 0457 F0000000 		.4byte	0xf0
+ 790 045b 84       		.byte	0x84
+ 791 045c 08       		.uleb128 0x8
+ 792 045d A6000000 		.4byte	.LASF94
+ 793 0461 06       		.byte	0x6
+ 794 0462 8E       		.byte	0x8e
+ 795 0463 F0000000 		.4byte	0xf0
+ 796 0467 88       		.byte	0x88
+ 797 0468 08       		.uleb128 0x8
+ 798 0469 750A0000 		.4byte	.LASF95
+ 799 046d 06       		.byte	0x6
+ 800 046e 8F       		.byte	0x8f
+ 801 046f F0000000 		.4byte	0xf0
+ 802 0473 8C       		.byte	0x8c
+ 803 0474 08       		.uleb128 0x8
+ 804 0475 AB050000 		.4byte	.LASF96
+ 805 0479 06       		.byte	0x6
+ 806 047a 90       		.byte	0x90
+ 807 047b F0000000 		.4byte	0xf0
+ 808 047f 90       		.byte	0x90
+ 809 0480 08       		.uleb128 0x8
+ 810 0481 62030000 		.4byte	.LASF97
+ 811 0485 06       		.byte	0x6
+ 812 0486 91       		.byte	0x91
+ 813 0487 F0000000 		.4byte	0xf0
+ 814 048b 94       		.byte	0x94
+ 815 048c 08       		.uleb128 0x8
+ 816 048d 57050000 		.4byte	.LASF98
+ 817 0491 06       		.byte	0x6
+ 818 0492 92       		.byte	0x92
+ 819 0493 F0000000 		.4byte	0xf0
+ 820 0497 98       		.byte	0x98
+ 821 0498 08       		.uleb128 0x8
+ 822 0499 060B0000 		.4byte	.LASF99
+ 823 049d 06       		.byte	0x6
+ 824 049e 93       		.byte	0x93
+ 825 049f F0000000 		.4byte	0xf0
+ 826 04a3 9C       		.byte	0x9c
+ 827 04a4 08       		.uleb128 0x8
+ 828 04a5 14010000 		.4byte	.LASF100
+ 829 04a9 06       		.byte	0x6
+ 830 04aa 94       		.byte	0x94
+ 831 04ab F0000000 		.4byte	0xf0
+ 832 04af A0       		.byte	0xa0
+ 833 04b0 08       		.uleb128 0x8
+ 834 04b1 EF010000 		.4byte	.LASF101
+ 835 04b5 06       		.byte	0x6
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 21
+
+
+ 836 04b6 95       		.byte	0x95
+ 837 04b7 DA000000 		.4byte	0xda
+ 838 04bb A4       		.byte	0xa4
+ 839 04bc 08       		.uleb128 0x8
+ 840 04bd 390A0000 		.4byte	.LASF102
+ 841 04c1 06       		.byte	0x6
+ 842 04c2 96       		.byte	0x96
+ 843 04c3 DA000000 		.4byte	0xda
+ 844 04c7 A6       		.byte	0xa6
+ 845 04c8 08       		.uleb128 0x8
+ 846 04c9 49070000 		.4byte	.LASF103
+ 847 04cd 06       		.byte	0x6
+ 848 04ce 97       		.byte	0x97
+ 849 04cf DA000000 		.4byte	0xda
+ 850 04d3 A8       		.byte	0xa8
+ 851 04d4 08       		.uleb128 0x8
+ 852 04d5 F4080000 		.4byte	.LASF104
+ 853 04d9 06       		.byte	0x6
+ 854 04da 98       		.byte	0x98
+ 855 04db DA000000 		.4byte	0xda
+ 856 04df AA       		.byte	0xaa
+ 857 04e0 08       		.uleb128 0x8
+ 858 04e1 DB040000 		.4byte	.LASF105
+ 859 04e5 06       		.byte	0x6
+ 860 04e6 99       		.byte	0x99
+ 861 04e7 DA000000 		.4byte	0xda
+ 862 04eb AC       		.byte	0xac
+ 863 04ec 08       		.uleb128 0x8
+ 864 04ed 0C060000 		.4byte	.LASF106
+ 865 04f1 06       		.byte	0x6
+ 866 04f2 9A       		.byte	0x9a
+ 867 04f3 DA000000 		.4byte	0xda
+ 868 04f7 AE       		.byte	0xae
+ 869 04f8 08       		.uleb128 0x8
+ 870 04f9 95090000 		.4byte	.LASF107
+ 871 04fd 06       		.byte	0x6
+ 872 04fe 9D       		.byte	0x9d
+ 873 04ff DA000000 		.4byte	0xda
+ 874 0503 B0       		.byte	0xb0
+ 875 0504 08       		.uleb128 0x8
+ 876 0505 E5070000 		.4byte	.LASF108
+ 877 0509 06       		.byte	0x6
+ 878 050a 9E       		.byte	0x9e
+ 879 050b F0000000 		.4byte	0xf0
+ 880 050f B4       		.byte	0xb4
+ 881 0510 00       		.byte	0
+ 882 0511 02       		.uleb128 0x2
+ 883 0512 11050000 		.4byte	.LASF109
+ 884 0516 06       		.byte	0x6
+ 885 0517 9F       		.byte	0x9f
+ 886 0518 00010000 		.4byte	0x100
+ 887 051c 03       		.uleb128 0x3
+ 888 051d 04       		.byte	0x4
+ 889 051e 04       		.byte	0x4
+ 890 051f 1F070000 		.4byte	.LASF110
+ 891 0523 03       		.uleb128 0x3
+ 892 0524 08       		.byte	0x8
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 22
+
+
+ 893 0525 04       		.byte	0x4
+ 894 0526 C8020000 		.4byte	.LASF111
+ 895 052a 03       		.uleb128 0x3
+ 896 052b 01       		.byte	0x1
+ 897 052c 02       		.byte	0x2
+ 898 052d A0070000 		.4byte	.LASF112
+ 899 0531 09       		.uleb128 0x9
+ 900 0532 01       		.byte	0x1
+ 901 0533 5E000000 		.4byte	0x5e
+ 902 0537 07       		.byte	0x7
+ 903 0538 2402     		.2byte	0x224
+ 904 053a 4B050000 		.4byte	0x54b
+ 905 053e 0A       		.uleb128 0xa
+ 906 053f 91070000 		.4byte	.LASF113
+ 907 0543 00       		.byte	0
+ 908 0544 0A       		.uleb128 0xa
+ 909 0545 56020000 		.4byte	.LASF114
+ 910 0549 01       		.byte	0x1
+ 911 054a 00       		.byte	0
+ 912 054b 0B       		.uleb128 0xb
+ 913 054c 210A0000 		.4byte	.LASF115
+ 914 0550 07       		.byte	0x7
+ 915 0551 2702     		.2byte	0x227
+ 916 0553 31050000 		.4byte	0x531
+ 917 0557 0B       		.uleb128 0xb
+ 918 0558 23020000 		.4byte	.LASF116
+ 919 055c 07       		.byte	0x7
+ 920 055d 3902     		.2byte	0x239
+ 921 055f 63050000 		.4byte	0x563
+ 922 0563 0C       		.uleb128 0xc
+ 923 0564 04       		.byte	0x4
+ 924 0565 69050000 		.4byte	0x569
+ 925 0569 0D       		.uleb128 0xd
+ 926 056a 74050000 		.4byte	0x574
+ 927 056e 0E       		.uleb128 0xe
+ 928 056f F0000000 		.4byte	0xf0
+ 929 0573 00       		.byte	0
+ 930 0574 0B       		.uleb128 0xb
+ 931 0575 59080000 		.4byte	.LASF117
+ 932 0579 07       		.byte	0x7
+ 933 057a 4402     		.2byte	0x244
+ 934 057c 80050000 		.4byte	0x580
+ 935 0580 0C       		.uleb128 0xc
+ 936 0581 04       		.byte	0x4
+ 937 0582 86050000 		.4byte	0x586
+ 938 0586 0F       		.uleb128 0xf
+ 939 0587 4B050000 		.4byte	0x54b
+ 940 058b 95050000 		.4byte	0x595
+ 941 058f 0E       		.uleb128 0xe
+ 942 0590 F0000000 		.4byte	0xf0
+ 943 0594 00       		.byte	0
+ 944 0595 10       		.uleb128 0x10
+ 945 0596 67010000 		.4byte	.LASF141
+ 946 059a 4C       		.byte	0x4c
+ 947 059b 07       		.byte	0x7
+ 948 059c C302     		.2byte	0x2c3
+ 949 059e B4060000 		.4byte	0x6b4
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 23
+
+
+ 950 05a2 11       		.uleb128 0x11
+ 951 05a3 A3090000 		.4byte	.LASF118
+ 952 05a7 07       		.byte	0x7
+ 953 05a8 C602     		.2byte	0x2c6
+ 954 05aa 2A050000 		.4byte	0x52a
+ 955 05ae 00       		.byte	0
+ 956 05af 11       		.uleb128 0x11
+ 957 05b0 C2040000 		.4byte	.LASF119
+ 958 05b4 07       		.byte	0x7
+ 959 05b5 C702     		.2byte	0x2c7
+ 960 05b7 2A050000 		.4byte	0x52a
+ 961 05bb 01       		.byte	0x1
+ 962 05bc 11       		.uleb128 0x11
+ 963 05bd 1D020000 		.4byte	.LASF120
+ 964 05c1 07       		.byte	0x7
+ 965 05c2 C902     		.2byte	0x2c9
+ 966 05c4 FB000000 		.4byte	0xfb
+ 967 05c8 04       		.byte	0x4
+ 968 05c9 11       		.uleb128 0x11
+ 969 05ca 2A010000 		.4byte	.LASF121
+ 970 05ce 07       		.byte	0x7
+ 971 05cf CB02     		.2byte	0x2cb
+ 972 05d1 FB000000 		.4byte	0xfb
+ 973 05d5 08       		.byte	0x8
+ 974 05d6 11       		.uleb128 0x11
+ 975 05d7 4D080000 		.4byte	.LASF122
+ 976 05db 07       		.byte	0x7
+ 977 05dc CC02     		.2byte	0x2cc
+ 978 05de 2A050000 		.4byte	0x52a
+ 979 05e2 0C       		.byte	0xc
+ 980 05e3 11       		.uleb128 0x11
+ 981 05e4 4A020000 		.4byte	.LASF123
+ 982 05e8 07       		.byte	0x7
+ 983 05e9 CD02     		.2byte	0x2cd
+ 984 05eb 2A050000 		.4byte	0x52a
+ 985 05ef 0D       		.byte	0xd
+ 986 05f0 11       		.uleb128 0x11
+ 987 05f1 2A090000 		.4byte	.LASF124
+ 988 05f5 07       		.byte	0x7
+ 989 05f6 CF02     		.2byte	0x2cf
+ 990 05f8 B4060000 		.4byte	0x6b4
+ 991 05fc 10       		.byte	0x10
+ 992 05fd 11       		.uleb128 0x11
+ 993 05fe 28080000 		.4byte	.LASF125
+ 994 0602 07       		.byte	0x7
+ 995 0603 D002     		.2byte	0x2d0
+ 996 0605 F0000000 		.4byte	0xf0
+ 997 0609 14       		.byte	0x14
+ 998 060a 11       		.uleb128 0x11
+ 999 060b D4050000 		.4byte	.LASF126
+ 1000 060f 07       		.byte	0x7
+ 1001 0610 D102     		.2byte	0x2d1
+ 1002 0612 FB000000 		.4byte	0xfb
+ 1003 0616 18       		.byte	0x18
+ 1004 0617 11       		.uleb128 0x11
+ 1005 0618 75080000 		.4byte	.LASF127
+ 1006 061c 07       		.byte	0x7
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 24
+
+
+ 1007 061d D202     		.2byte	0x2d2
+ 1008 061f FB000000 		.4byte	0xfb
+ 1009 0623 1C       		.byte	0x1c
+ 1010 0624 11       		.uleb128 0x11
+ 1011 0625 85000000 		.4byte	.LASF128
+ 1012 0629 07       		.byte	0x7
+ 1013 062a D402     		.2byte	0x2d4
+ 1014 062c FB000000 		.4byte	0xfb
+ 1015 0630 20       		.byte	0x20
+ 1016 0631 11       		.uleb128 0x11
+ 1017 0632 19040000 		.4byte	.LASF129
+ 1018 0636 07       		.byte	0x7
+ 1019 0637 D502     		.2byte	0x2d5
+ 1020 0639 BA060000 		.4byte	0x6ba
+ 1021 063d 24       		.byte	0x24
+ 1022 063e 11       		.uleb128 0x11
+ 1023 063f D9090000 		.4byte	.LASF130
+ 1024 0643 07       		.byte	0x7
+ 1025 0644 D702     		.2byte	0x2d7
+ 1026 0646 B4060000 		.4byte	0x6b4
+ 1027 064a 28       		.byte	0x28
+ 1028 064b 11       		.uleb128 0x11
+ 1029 064c E7090000 		.4byte	.LASF131
+ 1030 0650 07       		.byte	0x7
+ 1031 0651 D802     		.2byte	0x2d8
+ 1032 0653 F0000000 		.4byte	0xf0
+ 1033 0657 2C       		.byte	0x2c
+ 1034 0658 11       		.uleb128 0x11
+ 1035 0659 FF030000 		.4byte	.LASF132
+ 1036 065d 07       		.byte	0x7
+ 1037 065e D902     		.2byte	0x2d9
+ 1038 0660 FB000000 		.4byte	0xfb
+ 1039 0664 30       		.byte	0x30
+ 1040 0665 11       		.uleb128 0x11
+ 1041 0666 84080000 		.4byte	.LASF133
+ 1042 066a 07       		.byte	0x7
+ 1043 066b DA02     		.2byte	0x2da
+ 1044 066d FB000000 		.4byte	0xfb
+ 1045 0671 34       		.byte	0x34
+ 1046 0672 11       		.uleb128 0x11
+ 1047 0673 6D050000 		.4byte	.LASF134
+ 1048 0677 07       		.byte	0x7
+ 1049 0678 DC02     		.2byte	0x2dc
+ 1050 067a B4060000 		.4byte	0x6b4
+ 1051 067e 38       		.byte	0x38
+ 1052 067f 11       		.uleb128 0x11
+ 1053 0680 DD010000 		.4byte	.LASF135
+ 1054 0684 07       		.byte	0x7
+ 1055 0685 DD02     		.2byte	0x2dd
+ 1056 0687 F0000000 		.4byte	0xf0
+ 1057 068b 3C       		.byte	0x3c
+ 1058 068c 11       		.uleb128 0x11
+ 1059 068d 56010000 		.4byte	.LASF136
+ 1060 0691 07       		.byte	0x7
+ 1061 0692 DE02     		.2byte	0x2de
+ 1062 0694 FB000000 		.4byte	0xfb
+ 1063 0698 40       		.byte	0x40
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 25
+
+
+ 1064 0699 11       		.uleb128 0x11
+ 1065 069a E9040000 		.4byte	.LASF137
+ 1066 069e 07       		.byte	0x7
+ 1067 069f E402     		.2byte	0x2e4
+ 1068 06a1 57050000 		.4byte	0x557
+ 1069 06a5 44       		.byte	0x44
+ 1070 06a6 11       		.uleb128 0x11
+ 1071 06a7 15030000 		.4byte	.LASF138
+ 1072 06ab 07       		.byte	0x7
+ 1073 06ac EB02     		.2byte	0x2eb
+ 1074 06ae 74050000 		.4byte	0x574
+ 1075 06b2 48       		.byte	0x48
+ 1076 06b3 00       		.byte	0
+ 1077 06b4 0C       		.uleb128 0xc
+ 1078 06b5 04       		.byte	0x4
+ 1079 06b6 C4000000 		.4byte	0xc4
+ 1080 06ba 06       		.uleb128 0x6
+ 1081 06bb 2A050000 		.4byte	0x52a
+ 1082 06bf 0B       		.uleb128 0xb
+ 1083 06c0 AE080000 		.4byte	.LASF139
+ 1084 06c4 07       		.byte	0x7
+ 1085 06c5 EE02     		.2byte	0x2ee
+ 1086 06c7 95050000 		.4byte	0x595
+ 1087 06cb 0B       		.uleb128 0xb
+ 1088 06cc 6F040000 		.4byte	.LASF140
+ 1089 06d0 08       		.byte	0x8
+ 1090 06d1 D901     		.2byte	0x1d9
+ 1091 06d3 63050000 		.4byte	0x563
+ 1092 06d7 10       		.uleb128 0x10
+ 1093 06d8 4D0B0000 		.4byte	.LASF142
+ 1094 06dc 38       		.byte	0x38
+ 1095 06dd 08       		.byte	0x8
+ 1096 06de 7502     		.2byte	0x275
+ 1097 06e0 9B070000 		.4byte	0x79b
+ 1098 06e4 11       		.uleb128 0x11
+ 1099 06e5 1C0B0000 		.4byte	.LASF143
+ 1100 06e9 08       		.byte	0x8
+ 1101 06ea 7802     		.2byte	0x278
+ 1102 06ec FB000000 		.4byte	0xfb
+ 1103 06f0 00       		.byte	0
+ 1104 06f1 11       		.uleb128 0x11
+ 1105 06f2 36060000 		.4byte	.LASF144
+ 1106 06f6 08       		.byte	0x8
+ 1107 06f7 7902     		.2byte	0x279
+ 1108 06f9 FB000000 		.4byte	0xfb
+ 1109 06fd 04       		.byte	0x4
+ 1110 06fe 11       		.uleb128 0x11
+ 1111 06ff 0A010000 		.4byte	.LASF145
+ 1112 0703 08       		.byte	0x8
+ 1113 0704 7B02     		.2byte	0x27b
+ 1114 0706 BB000000 		.4byte	0xbb
+ 1115 070a 08       		.byte	0x8
+ 1116 070b 11       		.uleb128 0x11
+ 1117 070c 6B090000 		.4byte	.LASF146
+ 1118 0710 08       		.byte	0x8
+ 1119 0711 7C02     		.2byte	0x27c
+ 1120 0713 F0000000 		.4byte	0xf0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 26
+
+
+ 1121 0717 0C       		.byte	0xc
+ 1122 0718 11       		.uleb128 0x11
+ 1123 0719 49050000 		.4byte	.LASF147
+ 1124 071d 08       		.byte	0x8
+ 1125 071e 7D02     		.2byte	0x27d
+ 1126 0720 FB000000 		.4byte	0xfb
+ 1127 0724 10       		.byte	0x10
+ 1128 0725 11       		.uleb128 0x11
+ 1129 0726 9F0A0000 		.4byte	.LASF148
+ 1130 072a 08       		.byte	0x8
+ 1131 072b 7E02     		.2byte	0x27e
+ 1132 072d FB000000 		.4byte	0xfb
+ 1133 0731 14       		.byte	0x14
+ 1134 0732 11       		.uleb128 0x11
+ 1135 0733 D3090000 		.4byte	.LASF149
+ 1136 0737 08       		.byte	0x8
+ 1137 0738 8002     		.2byte	0x280
+ 1138 073a BB000000 		.4byte	0xbb
+ 1139 073e 18       		.byte	0x18
+ 1140 073f 11       		.uleb128 0x11
+ 1141 0740 12000000 		.4byte	.LASF150
+ 1142 0744 08       		.byte	0x8
+ 1143 0745 8102     		.2byte	0x281
+ 1144 0747 F0000000 		.4byte	0xf0
+ 1145 074b 1C       		.byte	0x1c
+ 1146 074c 11       		.uleb128 0x11
+ 1147 074d 59030000 		.4byte	.LASF151
+ 1148 0751 08       		.byte	0x8
+ 1149 0752 8202     		.2byte	0x282
+ 1150 0754 FB000000 		.4byte	0xfb
+ 1151 0758 20       		.byte	0x20
+ 1152 0759 11       		.uleb128 0x11
+ 1153 075a 0B050000 		.4byte	.LASF152
+ 1154 075e 08       		.byte	0x8
+ 1155 075f 8402     		.2byte	0x284
+ 1156 0761 BB000000 		.4byte	0xbb
+ 1157 0765 24       		.byte	0x24
+ 1158 0766 11       		.uleb128 0x11
+ 1159 0767 77030000 		.4byte	.LASF153
+ 1160 076b 08       		.byte	0x8
+ 1161 076c 8502     		.2byte	0x285
+ 1162 076e F0000000 		.4byte	0xf0
+ 1163 0772 28       		.byte	0x28
+ 1164 0773 11       		.uleb128 0x11
+ 1165 0774 6B070000 		.4byte	.LASF154
+ 1166 0778 08       		.byte	0x8
+ 1167 0779 8602     		.2byte	0x286
+ 1168 077b FB000000 		.4byte	0xfb
+ 1169 077f 2C       		.byte	0x2c
+ 1170 0780 11       		.uleb128 0x11
+ 1171 0781 E9040000 		.4byte	.LASF137
+ 1172 0785 08       		.byte	0x8
+ 1173 0786 8B02     		.2byte	0x28b
+ 1174 0788 CB060000 		.4byte	0x6cb
+ 1175 078c 30       		.byte	0x30
+ 1176 078d 11       		.uleb128 0x11
+ 1177 078e CB090000 		.4byte	.LASF155
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 27
+
+
+ 1178 0792 08       		.byte	0x8
+ 1179 0793 8E02     		.2byte	0x28e
+ 1180 0795 F0000000 		.4byte	0xf0
+ 1181 0799 34       		.byte	0x34
+ 1182 079a 00       		.byte	0
+ 1183 079b 0B       		.uleb128 0xb
+ 1184 079c F9090000 		.4byte	.LASF156
+ 1185 07a0 08       		.byte	0x8
+ 1186 07a1 9102     		.2byte	0x291
+ 1187 07a3 D7060000 		.4byte	0x6d7
+ 1188 07a7 12       		.uleb128 0x12
+ 1189 07a8 2B050000 		.4byte	.LASF172
+ 1190 07ac 02       		.byte	0x2
+ 1191 07ad 98       		.byte	0x98
+ 1192 07ae 03       		.byte	0x3
+ 1193 07af BF070000 		.4byte	0x7bf
+ 1194 07b3 13       		.uleb128 0x13
+ 1195 07b4 D6000000 		.4byte	.LASF173
+ 1196 07b8 02       		.byte	0x2
+ 1197 07b9 9A       		.byte	0x9a
+ 1198 07ba F0000000 		.4byte	0xf0
+ 1199 07be 00       		.byte	0
+ 1200 07bf 14       		.uleb128 0x14
+ 1201 07c0 42030000 		.4byte	.LASF174
+ 1202 07c4 01       		.byte	0x1
+ 1203 07c5 46       		.byte	0x46
+ 1204 07c6 BB000000 		.4byte	0xbb
+ 1205 07ca 00000000 		.4byte	.LFB512
+ 1206 07ce 64000000 		.4byte	.LFE512-.LFB512
+ 1207 07d2 01       		.uleb128 0x1
+ 1208 07d3 9C       		.byte	0x9c
+ 1209 07d4 38080000 		.4byte	0x838
+ 1210 07d8 15       		.uleb128 0x15
+ 1211 07d9 99040000 		.4byte	.LASF159
+ 1212 07dd 01       		.byte	0x1
+ 1213 07de 46       		.byte	0x46
+ 1214 07df 25000000 		.4byte	0x25
+ 1215 07e3 00000000 		.4byte	.LLST0
+ 1216 07e7 16       		.uleb128 0x16
+ 1217 07e8 36070000 		.4byte	.LASF157
+ 1218 07ec 01       		.byte	0x1
+ 1219 07ed 48       		.byte	0x48
+ 1220 07ee BB000000 		.4byte	0xbb
+ 1221 07f2 1E000000 		.4byte	.LLST1
+ 1222 07f6 17       		.uleb128 0x17
+ 1223 07f7 4E0A0000 		.4byte	.LASF158
+ 1224 07fb 01       		.byte	0x1
+ 1225 07fc 49       		.byte	0x49
+ 1226 07fd B4060000 		.4byte	0x6b4
+ 1227 0801 05       		.uleb128 0x5
+ 1228 0802 03       		.byte	0x3
+ 1229 0803 00000000 		.4byte	pucAlignedHeap.15934
+ 1230 0807 18       		.uleb128 0x18
+ 1231 0808 54000000 		.4byte	.LBB4
+ 1232 080c 04000000 		.4byte	.LBE4-.LBB4
+ 1233 0810 25080000 		.4byte	0x825
+ 1234 0814 19       		.uleb128 0x19
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 28
+
+
+ 1235 0815 78020000 		.4byte	.LASF166
+ 1236 0819 01       		.byte	0x1
+ 1237 081a 70       		.byte	0x70
+ 1238 081b 1A       		.uleb128 0x1a
+ 1239 081c 58000000 		.4byte	.LVL9
+ 1240 0820 0F090000 		.4byte	0x90f
+ 1241 0824 00       		.byte	0
+ 1242 0825 1A       		.uleb128 0x1a
+ 1243 0826 14000000 		.4byte	.LVL3
+ 1244 082a 1A090000 		.4byte	0x91a
+ 1245 082e 1A       		.uleb128 0x1a
+ 1246 082f 52000000 		.4byte	.LVL8
+ 1247 0833 26090000 		.4byte	0x926
+ 1248 0837 00       		.byte	0
+ 1249 0838 1B       		.uleb128 0x1b
+ 1250 0839 21050000 		.4byte	.LASF175
+ 1251 083d 01       		.byte	0x1
+ 1252 083e 7A       		.byte	0x7a
+ 1253 083f 00000000 		.4byte	.LFB513
+ 1254 0843 16000000 		.4byte	.LFE513-.LFB513
+ 1255 0847 01       		.uleb128 0x1
+ 1256 0848 9C       		.byte	0x9c
+ 1257 0849 79080000 		.4byte	0x879
+ 1258 084d 1C       		.uleb128 0x1c
+ 1259 084e 707600   		.ascii	"pv\000"
+ 1260 0851 01       		.byte	0x1
+ 1261 0852 7A       		.byte	0x7a
+ 1262 0853 BB000000 		.4byte	0xbb
+ 1263 0857 01       		.uleb128 0x1
+ 1264 0858 50       		.byte	0x50
+ 1265 0859 1D       		.uleb128 0x1d
+ 1266 085a A7070000 		.4byte	0x7a7
+ 1267 085e 02000000 		.4byte	.LBB5
+ 1268 0862 14000000 		.4byte	.LBE5-.LBB5
+ 1269 0866 01       		.byte	0x1
+ 1270 0867 82       		.byte	0x82
+ 1271 0868 1E       		.uleb128 0x1e
+ 1272 0869 02000000 		.4byte	.LBB6
+ 1273 086d 14000000 		.4byte	.LBE6-.LBB6
+ 1274 0871 1F       		.uleb128 0x1f
+ 1275 0872 B3070000 		.4byte	0x7b3
+ 1276 0876 00       		.byte	0
+ 1277 0877 00       		.byte	0
+ 1278 0878 00       		.byte	0
+ 1279 0879 20       		.uleb128 0x20
+ 1280 087a 12080000 		.4byte	.LASF176
+ 1281 087e 01       		.byte	0x1
+ 1282 087f 86       		.byte	0x86
+ 1283 0880 00000000 		.4byte	.LFB514
+ 1284 0884 10000000 		.4byte	.LFE514-.LFB514
+ 1285 0888 01       		.uleb128 0x1
+ 1286 0889 9C       		.byte	0x9c
+ 1287 088a 21       		.uleb128 0x21
+ 1288 088b BC070000 		.4byte	.LASF177
+ 1289 088f 01       		.byte	0x1
+ 1290 0890 8D       		.byte	0x8d
+ 1291 0891 25000000 		.4byte	0x25
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 29
+
+
+ 1292 0895 00000000 		.4byte	.LFB515
+ 1293 0899 14000000 		.4byte	.LFE515-.LFB515
+ 1294 089d 01       		.uleb128 0x1
+ 1295 089e 9C       		.byte	0x9c
+ 1296 089f 22       		.uleb128 0x22
+ 1297 08a0 C4000000 		.4byte	0xc4
+ 1298 08a4 B0080000 		.4byte	0x8b0
+ 1299 08a8 23       		.uleb128 0x23
+ 1300 08a9 B4000000 		.4byte	0xb4
+ 1301 08ad FF27     		.2byte	0x27ff
+ 1302 08af 00       		.byte	0
+ 1303 08b0 17       		.uleb128 0x17
+ 1304 08b1 3F060000 		.4byte	.LASF160
+ 1305 08b5 01       		.byte	0x1
+ 1306 08b6 3E       		.byte	0x3e
+ 1307 08b7 9F080000 		.4byte	0x89f
+ 1308 08bb 05       		.uleb128 0x5
+ 1309 08bc 03       		.byte	0x3
+ 1310 08bd 04000000 		.4byte	ucHeap
+ 1311 08c1 17       		.uleb128 0x17
+ 1312 08c2 29040000 		.4byte	.LASF161
+ 1313 08c6 01       		.byte	0x1
+ 1314 08c7 42       		.byte	0x42
+ 1315 08c8 25000000 		.4byte	0x25
+ 1316 08cc 05       		.uleb128 0x5
+ 1317 08cd 03       		.byte	0x3
+ 1318 08ce 04280000 		.4byte	xNextFreeByte
+ 1319 08d2 24       		.uleb128 0x24
+ 1320 08d3 3F070000 		.4byte	.LASF162
+ 1321 08d7 06       		.byte	0x6
+ 1322 08d8 A7       		.byte	0xa7
+ 1323 08d9 DD080000 		.4byte	0x8dd
+ 1324 08dd 0C       		.uleb128 0xc
+ 1325 08de 04       		.byte	0x4
+ 1326 08df E3080000 		.4byte	0x8e3
+ 1327 08e3 25       		.uleb128 0x25
+ 1328 08e4 11050000 		.4byte	0x511
+ 1329 08e8 26       		.uleb128 0x26
+ 1330 08e9 37010000 		.4byte	.LASF163
+ 1331 08ed 09       		.byte	0x9
+ 1332 08ee F907     		.2byte	0x7f9
+ 1333 08f0 F4080000 		.4byte	0x8f4
+ 1334 08f4 06       		.uleb128 0x6
+ 1335 08f5 E5000000 		.4byte	0xe5
+ 1336 08f9 24       		.uleb128 0x24
+ 1337 08fa 65020000 		.4byte	.LASF164
+ 1338 08fe 0A       		.byte	0xa
+ 1339 08ff 87       		.byte	0x87
+ 1340 0900 9B070000 		.4byte	0x79b
+ 1341 0904 24       		.uleb128 0x24
+ 1342 0905 7C070000 		.4byte	.LASF165
+ 1343 0909 0B       		.byte	0xb
+ 1344 090a 7F       		.byte	0x7f
+ 1345 090b BF060000 		.4byte	0x6bf
+ 1346 090f 27       		.uleb128 0x27
+ 1347 0910 78020000 		.4byte	.LASF166
+ 1348 0914 78020000 		.4byte	.LASF166
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 30
+
+
+ 1349 0918 01       		.byte	0x1
+ 1350 0919 70       		.byte	0x70
+ 1351 091a 28       		.uleb128 0x28
+ 1352 091b C7080000 		.4byte	.LASF167
+ 1353 091f C7080000 		.4byte	.LASF167
+ 1354 0923 0C       		.byte	0xc
+ 1355 0924 F904     		.2byte	0x4f9
+ 1356 0926 28       		.uleb128 0x28
+ 1357 0927 03080000 		.4byte	.LASF168
+ 1358 092b 03080000 		.4byte	.LASF168
+ 1359 092f 0C       		.byte	0xc
+ 1360 0930 2F05     		.2byte	0x52f
+ 1361 0932 00       		.byte	0
+ 1362              		.section	.debug_abbrev,"",%progbits
+ 1363              	.Ldebug_abbrev0:
+ 1364 0000 01       		.uleb128 0x1
+ 1365 0001 11       		.uleb128 0x11
+ 1366 0002 01       		.byte	0x1
+ 1367 0003 25       		.uleb128 0x25
+ 1368 0004 0E       		.uleb128 0xe
+ 1369 0005 13       		.uleb128 0x13
+ 1370 0006 0B       		.uleb128 0xb
+ 1371 0007 03       		.uleb128 0x3
+ 1372 0008 0E       		.uleb128 0xe
+ 1373 0009 1B       		.uleb128 0x1b
+ 1374 000a 0E       		.uleb128 0xe
+ 1375 000b 55       		.uleb128 0x55
+ 1376 000c 17       		.uleb128 0x17
+ 1377 000d 11       		.uleb128 0x11
+ 1378 000e 01       		.uleb128 0x1
+ 1379 000f 10       		.uleb128 0x10
+ 1380 0010 17       		.uleb128 0x17
+ 1381 0011 00       		.byte	0
+ 1382 0012 00       		.byte	0
+ 1383 0013 02       		.uleb128 0x2
+ 1384 0014 16       		.uleb128 0x16
+ 1385 0015 00       		.byte	0
+ 1386 0016 03       		.uleb128 0x3
+ 1387 0017 0E       		.uleb128 0xe
+ 1388 0018 3A       		.uleb128 0x3a
+ 1389 0019 0B       		.uleb128 0xb
+ 1390 001a 3B       		.uleb128 0x3b
+ 1391 001b 0B       		.uleb128 0xb
+ 1392 001c 49       		.uleb128 0x49
+ 1393 001d 13       		.uleb128 0x13
+ 1394 001e 00       		.byte	0
+ 1395 001f 00       		.byte	0
+ 1396 0020 03       		.uleb128 0x3
+ 1397 0021 24       		.uleb128 0x24
+ 1398 0022 00       		.byte	0
+ 1399 0023 0B       		.uleb128 0xb
+ 1400 0024 0B       		.uleb128 0xb
+ 1401 0025 3E       		.uleb128 0x3e
+ 1402 0026 0B       		.uleb128 0xb
+ 1403 0027 03       		.uleb128 0x3
+ 1404 0028 0E       		.uleb128 0xe
+ 1405 0029 00       		.byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 31
+
+
+ 1406 002a 00       		.byte	0
+ 1407 002b 04       		.uleb128 0x4
+ 1408 002c 24       		.uleb128 0x24
+ 1409 002d 00       		.byte	0
+ 1410 002e 0B       		.uleb128 0xb
+ 1411 002f 0B       		.uleb128 0xb
+ 1412 0030 3E       		.uleb128 0x3e
+ 1413 0031 0B       		.uleb128 0xb
+ 1414 0032 03       		.uleb128 0x3
+ 1415 0033 08       		.uleb128 0x8
+ 1416 0034 00       		.byte	0
+ 1417 0035 00       		.byte	0
+ 1418 0036 05       		.uleb128 0x5
+ 1419 0037 0F       		.uleb128 0xf
+ 1420 0038 00       		.byte	0
+ 1421 0039 0B       		.uleb128 0xb
+ 1422 003a 0B       		.uleb128 0xb
+ 1423 003b 00       		.byte	0
+ 1424 003c 00       		.byte	0
+ 1425 003d 06       		.uleb128 0x6
+ 1426 003e 35       		.uleb128 0x35
+ 1427 003f 00       		.byte	0
+ 1428 0040 49       		.uleb128 0x49
+ 1429 0041 13       		.uleb128 0x13
+ 1430 0042 00       		.byte	0
+ 1431 0043 00       		.byte	0
+ 1432 0044 07       		.uleb128 0x7
+ 1433 0045 13       		.uleb128 0x13
+ 1434 0046 01       		.byte	0x1
+ 1435 0047 0B       		.uleb128 0xb
+ 1436 0048 0B       		.uleb128 0xb
+ 1437 0049 3A       		.uleb128 0x3a
+ 1438 004a 0B       		.uleb128 0xb
+ 1439 004b 3B       		.uleb128 0x3b
+ 1440 004c 0B       		.uleb128 0xb
+ 1441 004d 01       		.uleb128 0x1
+ 1442 004e 13       		.uleb128 0x13
+ 1443 004f 00       		.byte	0
+ 1444 0050 00       		.byte	0
+ 1445 0051 08       		.uleb128 0x8
+ 1446 0052 0D       		.uleb128 0xd
+ 1447 0053 00       		.byte	0
+ 1448 0054 03       		.uleb128 0x3
+ 1449 0055 0E       		.uleb128 0xe
+ 1450 0056 3A       		.uleb128 0x3a
+ 1451 0057 0B       		.uleb128 0xb
+ 1452 0058 3B       		.uleb128 0x3b
+ 1453 0059 0B       		.uleb128 0xb
+ 1454 005a 49       		.uleb128 0x49
+ 1455 005b 13       		.uleb128 0x13
+ 1456 005c 38       		.uleb128 0x38
+ 1457 005d 0B       		.uleb128 0xb
+ 1458 005e 00       		.byte	0
+ 1459 005f 00       		.byte	0
+ 1460 0060 09       		.uleb128 0x9
+ 1461 0061 04       		.uleb128 0x4
+ 1462 0062 01       		.byte	0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 32
+
+
+ 1463 0063 0B       		.uleb128 0xb
+ 1464 0064 0B       		.uleb128 0xb
+ 1465 0065 49       		.uleb128 0x49
+ 1466 0066 13       		.uleb128 0x13
+ 1467 0067 3A       		.uleb128 0x3a
+ 1468 0068 0B       		.uleb128 0xb
+ 1469 0069 3B       		.uleb128 0x3b
+ 1470 006a 05       		.uleb128 0x5
+ 1471 006b 01       		.uleb128 0x1
+ 1472 006c 13       		.uleb128 0x13
+ 1473 006d 00       		.byte	0
+ 1474 006e 00       		.byte	0
+ 1475 006f 0A       		.uleb128 0xa
+ 1476 0070 28       		.uleb128 0x28
+ 1477 0071 00       		.byte	0
+ 1478 0072 03       		.uleb128 0x3
+ 1479 0073 0E       		.uleb128 0xe
+ 1480 0074 1C       		.uleb128 0x1c
+ 1481 0075 0B       		.uleb128 0xb
+ 1482 0076 00       		.byte	0
+ 1483 0077 00       		.byte	0
+ 1484 0078 0B       		.uleb128 0xb
+ 1485 0079 16       		.uleb128 0x16
+ 1486 007a 00       		.byte	0
+ 1487 007b 03       		.uleb128 0x3
+ 1488 007c 0E       		.uleb128 0xe
+ 1489 007d 3A       		.uleb128 0x3a
+ 1490 007e 0B       		.uleb128 0xb
+ 1491 007f 3B       		.uleb128 0x3b
+ 1492 0080 05       		.uleb128 0x5
+ 1493 0081 49       		.uleb128 0x49
+ 1494 0082 13       		.uleb128 0x13
+ 1495 0083 00       		.byte	0
+ 1496 0084 00       		.byte	0
+ 1497 0085 0C       		.uleb128 0xc
+ 1498 0086 0F       		.uleb128 0xf
+ 1499 0087 00       		.byte	0
+ 1500 0088 0B       		.uleb128 0xb
+ 1501 0089 0B       		.uleb128 0xb
+ 1502 008a 49       		.uleb128 0x49
+ 1503 008b 13       		.uleb128 0x13
+ 1504 008c 00       		.byte	0
+ 1505 008d 00       		.byte	0
+ 1506 008e 0D       		.uleb128 0xd
+ 1507 008f 15       		.uleb128 0x15
+ 1508 0090 01       		.byte	0x1
+ 1509 0091 27       		.uleb128 0x27
+ 1510 0092 19       		.uleb128 0x19
+ 1511 0093 01       		.uleb128 0x1
+ 1512 0094 13       		.uleb128 0x13
+ 1513 0095 00       		.byte	0
+ 1514 0096 00       		.byte	0
+ 1515 0097 0E       		.uleb128 0xe
+ 1516 0098 05       		.uleb128 0x5
+ 1517 0099 00       		.byte	0
+ 1518 009a 49       		.uleb128 0x49
+ 1519 009b 13       		.uleb128 0x13
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 33
+
+
+ 1520 009c 00       		.byte	0
+ 1521 009d 00       		.byte	0
+ 1522 009e 0F       		.uleb128 0xf
+ 1523 009f 15       		.uleb128 0x15
+ 1524 00a0 01       		.byte	0x1
+ 1525 00a1 27       		.uleb128 0x27
+ 1526 00a2 19       		.uleb128 0x19
+ 1527 00a3 49       		.uleb128 0x49
+ 1528 00a4 13       		.uleb128 0x13
+ 1529 00a5 01       		.uleb128 0x1
+ 1530 00a6 13       		.uleb128 0x13
+ 1531 00a7 00       		.byte	0
+ 1532 00a8 00       		.byte	0
+ 1533 00a9 10       		.uleb128 0x10
+ 1534 00aa 13       		.uleb128 0x13
+ 1535 00ab 01       		.byte	0x1
+ 1536 00ac 03       		.uleb128 0x3
+ 1537 00ad 0E       		.uleb128 0xe
+ 1538 00ae 0B       		.uleb128 0xb
+ 1539 00af 0B       		.uleb128 0xb
+ 1540 00b0 3A       		.uleb128 0x3a
+ 1541 00b1 0B       		.uleb128 0xb
+ 1542 00b2 3B       		.uleb128 0x3b
+ 1543 00b3 05       		.uleb128 0x5
+ 1544 00b4 01       		.uleb128 0x1
+ 1545 00b5 13       		.uleb128 0x13
+ 1546 00b6 00       		.byte	0
+ 1547 00b7 00       		.byte	0
+ 1548 00b8 11       		.uleb128 0x11
+ 1549 00b9 0D       		.uleb128 0xd
+ 1550 00ba 00       		.byte	0
+ 1551 00bb 03       		.uleb128 0x3
+ 1552 00bc 0E       		.uleb128 0xe
+ 1553 00bd 3A       		.uleb128 0x3a
+ 1554 00be 0B       		.uleb128 0xb
+ 1555 00bf 3B       		.uleb128 0x3b
+ 1556 00c0 05       		.uleb128 0x5
+ 1557 00c1 49       		.uleb128 0x49
+ 1558 00c2 13       		.uleb128 0x13
+ 1559 00c3 38       		.uleb128 0x38
+ 1560 00c4 0B       		.uleb128 0xb
+ 1561 00c5 00       		.byte	0
+ 1562 00c6 00       		.byte	0
+ 1563 00c7 12       		.uleb128 0x12
+ 1564 00c8 2E       		.uleb128 0x2e
+ 1565 00c9 01       		.byte	0x1
+ 1566 00ca 03       		.uleb128 0x3
+ 1567 00cb 0E       		.uleb128 0xe
+ 1568 00cc 3A       		.uleb128 0x3a
+ 1569 00cd 0B       		.uleb128 0xb
+ 1570 00ce 3B       		.uleb128 0x3b
+ 1571 00cf 0B       		.uleb128 0xb
+ 1572 00d0 27       		.uleb128 0x27
+ 1573 00d1 19       		.uleb128 0x19
+ 1574 00d2 20       		.uleb128 0x20
+ 1575 00d3 0B       		.uleb128 0xb
+ 1576 00d4 01       		.uleb128 0x1
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 34
+
+
+ 1577 00d5 13       		.uleb128 0x13
+ 1578 00d6 00       		.byte	0
+ 1579 00d7 00       		.byte	0
+ 1580 00d8 13       		.uleb128 0x13
+ 1581 00d9 34       		.uleb128 0x34
+ 1582 00da 00       		.byte	0
+ 1583 00db 03       		.uleb128 0x3
+ 1584 00dc 0E       		.uleb128 0xe
+ 1585 00dd 3A       		.uleb128 0x3a
+ 1586 00de 0B       		.uleb128 0xb
+ 1587 00df 3B       		.uleb128 0x3b
+ 1588 00e0 0B       		.uleb128 0xb
+ 1589 00e1 49       		.uleb128 0x49
+ 1590 00e2 13       		.uleb128 0x13
+ 1591 00e3 00       		.byte	0
+ 1592 00e4 00       		.byte	0
+ 1593 00e5 14       		.uleb128 0x14
+ 1594 00e6 2E       		.uleb128 0x2e
+ 1595 00e7 01       		.byte	0x1
+ 1596 00e8 3F       		.uleb128 0x3f
+ 1597 00e9 19       		.uleb128 0x19
+ 1598 00ea 03       		.uleb128 0x3
+ 1599 00eb 0E       		.uleb128 0xe
+ 1600 00ec 3A       		.uleb128 0x3a
+ 1601 00ed 0B       		.uleb128 0xb
+ 1602 00ee 3B       		.uleb128 0x3b
+ 1603 00ef 0B       		.uleb128 0xb
+ 1604 00f0 27       		.uleb128 0x27
+ 1605 00f1 19       		.uleb128 0x19
+ 1606 00f2 49       		.uleb128 0x49
+ 1607 00f3 13       		.uleb128 0x13
+ 1608 00f4 11       		.uleb128 0x11
+ 1609 00f5 01       		.uleb128 0x1
+ 1610 00f6 12       		.uleb128 0x12
+ 1611 00f7 06       		.uleb128 0x6
+ 1612 00f8 40       		.uleb128 0x40
+ 1613 00f9 18       		.uleb128 0x18
+ 1614 00fa 9742     		.uleb128 0x2117
+ 1615 00fc 19       		.uleb128 0x19
+ 1616 00fd 01       		.uleb128 0x1
+ 1617 00fe 13       		.uleb128 0x13
+ 1618 00ff 00       		.byte	0
+ 1619 0100 00       		.byte	0
+ 1620 0101 15       		.uleb128 0x15
+ 1621 0102 05       		.uleb128 0x5
+ 1622 0103 00       		.byte	0
+ 1623 0104 03       		.uleb128 0x3
+ 1624 0105 0E       		.uleb128 0xe
+ 1625 0106 3A       		.uleb128 0x3a
+ 1626 0107 0B       		.uleb128 0xb
+ 1627 0108 3B       		.uleb128 0x3b
+ 1628 0109 0B       		.uleb128 0xb
+ 1629 010a 49       		.uleb128 0x49
+ 1630 010b 13       		.uleb128 0x13
+ 1631 010c 02       		.uleb128 0x2
+ 1632 010d 17       		.uleb128 0x17
+ 1633 010e 00       		.byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 35
+
+
+ 1634 010f 00       		.byte	0
+ 1635 0110 16       		.uleb128 0x16
+ 1636 0111 34       		.uleb128 0x34
+ 1637 0112 00       		.byte	0
+ 1638 0113 03       		.uleb128 0x3
+ 1639 0114 0E       		.uleb128 0xe
+ 1640 0115 3A       		.uleb128 0x3a
+ 1641 0116 0B       		.uleb128 0xb
+ 1642 0117 3B       		.uleb128 0x3b
+ 1643 0118 0B       		.uleb128 0xb
+ 1644 0119 49       		.uleb128 0x49
+ 1645 011a 13       		.uleb128 0x13
+ 1646 011b 02       		.uleb128 0x2
+ 1647 011c 17       		.uleb128 0x17
+ 1648 011d 00       		.byte	0
+ 1649 011e 00       		.byte	0
+ 1650 011f 17       		.uleb128 0x17
+ 1651 0120 34       		.uleb128 0x34
+ 1652 0121 00       		.byte	0
+ 1653 0122 03       		.uleb128 0x3
+ 1654 0123 0E       		.uleb128 0xe
+ 1655 0124 3A       		.uleb128 0x3a
+ 1656 0125 0B       		.uleb128 0xb
+ 1657 0126 3B       		.uleb128 0x3b
+ 1658 0127 0B       		.uleb128 0xb
+ 1659 0128 49       		.uleb128 0x49
+ 1660 0129 13       		.uleb128 0x13
+ 1661 012a 02       		.uleb128 0x2
+ 1662 012b 18       		.uleb128 0x18
+ 1663 012c 00       		.byte	0
+ 1664 012d 00       		.byte	0
+ 1665 012e 18       		.uleb128 0x18
+ 1666 012f 0B       		.uleb128 0xb
+ 1667 0130 01       		.byte	0x1
+ 1668 0131 11       		.uleb128 0x11
+ 1669 0132 01       		.uleb128 0x1
+ 1670 0133 12       		.uleb128 0x12
+ 1671 0134 06       		.uleb128 0x6
+ 1672 0135 01       		.uleb128 0x1
+ 1673 0136 13       		.uleb128 0x13
+ 1674 0137 00       		.byte	0
+ 1675 0138 00       		.byte	0
+ 1676 0139 19       		.uleb128 0x19
+ 1677 013a 2E       		.uleb128 0x2e
+ 1678 013b 00       		.byte	0
+ 1679 013c 3F       		.uleb128 0x3f
+ 1680 013d 19       		.uleb128 0x19
+ 1681 013e 03       		.uleb128 0x3
+ 1682 013f 0E       		.uleb128 0xe
+ 1683 0140 3A       		.uleb128 0x3a
+ 1684 0141 0B       		.uleb128 0xb
+ 1685 0142 3B       		.uleb128 0x3b
+ 1686 0143 0B       		.uleb128 0xb
+ 1687 0144 27       		.uleb128 0x27
+ 1688 0145 19       		.uleb128 0x19
+ 1689 0146 3C       		.uleb128 0x3c
+ 1690 0147 19       		.uleb128 0x19
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 36
+
+
+ 1691 0148 00       		.byte	0
+ 1692 0149 00       		.byte	0
+ 1693 014a 1A       		.uleb128 0x1a
+ 1694 014b 898201   		.uleb128 0x4109
+ 1695 014e 00       		.byte	0
+ 1696 014f 11       		.uleb128 0x11
+ 1697 0150 01       		.uleb128 0x1
+ 1698 0151 31       		.uleb128 0x31
+ 1699 0152 13       		.uleb128 0x13
+ 1700 0153 00       		.byte	0
+ 1701 0154 00       		.byte	0
+ 1702 0155 1B       		.uleb128 0x1b
+ 1703 0156 2E       		.uleb128 0x2e
+ 1704 0157 01       		.byte	0x1
+ 1705 0158 3F       		.uleb128 0x3f
+ 1706 0159 19       		.uleb128 0x19
+ 1707 015a 03       		.uleb128 0x3
+ 1708 015b 0E       		.uleb128 0xe
+ 1709 015c 3A       		.uleb128 0x3a
+ 1710 015d 0B       		.uleb128 0xb
+ 1711 015e 3B       		.uleb128 0x3b
+ 1712 015f 0B       		.uleb128 0xb
+ 1713 0160 27       		.uleb128 0x27
+ 1714 0161 19       		.uleb128 0x19
+ 1715 0162 11       		.uleb128 0x11
+ 1716 0163 01       		.uleb128 0x1
+ 1717 0164 12       		.uleb128 0x12
+ 1718 0165 06       		.uleb128 0x6
+ 1719 0166 40       		.uleb128 0x40
+ 1720 0167 18       		.uleb128 0x18
+ 1721 0168 9742     		.uleb128 0x2117
+ 1722 016a 19       		.uleb128 0x19
+ 1723 016b 01       		.uleb128 0x1
+ 1724 016c 13       		.uleb128 0x13
+ 1725 016d 00       		.byte	0
+ 1726 016e 00       		.byte	0
+ 1727 016f 1C       		.uleb128 0x1c
+ 1728 0170 05       		.uleb128 0x5
+ 1729 0171 00       		.byte	0
+ 1730 0172 03       		.uleb128 0x3
+ 1731 0173 08       		.uleb128 0x8
+ 1732 0174 3A       		.uleb128 0x3a
+ 1733 0175 0B       		.uleb128 0xb
+ 1734 0176 3B       		.uleb128 0x3b
+ 1735 0177 0B       		.uleb128 0xb
+ 1736 0178 49       		.uleb128 0x49
+ 1737 0179 13       		.uleb128 0x13
+ 1738 017a 02       		.uleb128 0x2
+ 1739 017b 18       		.uleb128 0x18
+ 1740 017c 00       		.byte	0
+ 1741 017d 00       		.byte	0
+ 1742 017e 1D       		.uleb128 0x1d
+ 1743 017f 1D       		.uleb128 0x1d
+ 1744 0180 01       		.byte	0x1
+ 1745 0181 31       		.uleb128 0x31
+ 1746 0182 13       		.uleb128 0x13
+ 1747 0183 11       		.uleb128 0x11
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 37
+
+
+ 1748 0184 01       		.uleb128 0x1
+ 1749 0185 12       		.uleb128 0x12
+ 1750 0186 06       		.uleb128 0x6
+ 1751 0187 58       		.uleb128 0x58
+ 1752 0188 0B       		.uleb128 0xb
+ 1753 0189 59       		.uleb128 0x59
+ 1754 018a 0B       		.uleb128 0xb
+ 1755 018b 00       		.byte	0
+ 1756 018c 00       		.byte	0
+ 1757 018d 1E       		.uleb128 0x1e
+ 1758 018e 0B       		.uleb128 0xb
+ 1759 018f 01       		.byte	0x1
+ 1760 0190 11       		.uleb128 0x11
+ 1761 0191 01       		.uleb128 0x1
+ 1762 0192 12       		.uleb128 0x12
+ 1763 0193 06       		.uleb128 0x6
+ 1764 0194 00       		.byte	0
+ 1765 0195 00       		.byte	0
+ 1766 0196 1F       		.uleb128 0x1f
+ 1767 0197 34       		.uleb128 0x34
+ 1768 0198 00       		.byte	0
+ 1769 0199 31       		.uleb128 0x31
+ 1770 019a 13       		.uleb128 0x13
+ 1771 019b 00       		.byte	0
+ 1772 019c 00       		.byte	0
+ 1773 019d 20       		.uleb128 0x20
+ 1774 019e 2E       		.uleb128 0x2e
+ 1775 019f 00       		.byte	0
+ 1776 01a0 3F       		.uleb128 0x3f
+ 1777 01a1 19       		.uleb128 0x19
+ 1778 01a2 03       		.uleb128 0x3
+ 1779 01a3 0E       		.uleb128 0xe
+ 1780 01a4 3A       		.uleb128 0x3a
+ 1781 01a5 0B       		.uleb128 0xb
+ 1782 01a6 3B       		.uleb128 0x3b
+ 1783 01a7 0B       		.uleb128 0xb
+ 1784 01a8 27       		.uleb128 0x27
+ 1785 01a9 19       		.uleb128 0x19
+ 1786 01aa 11       		.uleb128 0x11
+ 1787 01ab 01       		.uleb128 0x1
+ 1788 01ac 12       		.uleb128 0x12
+ 1789 01ad 06       		.uleb128 0x6
+ 1790 01ae 40       		.uleb128 0x40
+ 1791 01af 18       		.uleb128 0x18
+ 1792 01b0 9742     		.uleb128 0x2117
+ 1793 01b2 19       		.uleb128 0x19
+ 1794 01b3 00       		.byte	0
+ 1795 01b4 00       		.byte	0
+ 1796 01b5 21       		.uleb128 0x21
+ 1797 01b6 2E       		.uleb128 0x2e
+ 1798 01b7 00       		.byte	0
+ 1799 01b8 3F       		.uleb128 0x3f
+ 1800 01b9 19       		.uleb128 0x19
+ 1801 01ba 03       		.uleb128 0x3
+ 1802 01bb 0E       		.uleb128 0xe
+ 1803 01bc 3A       		.uleb128 0x3a
+ 1804 01bd 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 38
+
+
+ 1805 01be 3B       		.uleb128 0x3b
+ 1806 01bf 0B       		.uleb128 0xb
+ 1807 01c0 27       		.uleb128 0x27
+ 1808 01c1 19       		.uleb128 0x19
+ 1809 01c2 49       		.uleb128 0x49
+ 1810 01c3 13       		.uleb128 0x13
+ 1811 01c4 11       		.uleb128 0x11
+ 1812 01c5 01       		.uleb128 0x1
+ 1813 01c6 12       		.uleb128 0x12
+ 1814 01c7 06       		.uleb128 0x6
+ 1815 01c8 40       		.uleb128 0x40
+ 1816 01c9 18       		.uleb128 0x18
+ 1817 01ca 9742     		.uleb128 0x2117
+ 1818 01cc 19       		.uleb128 0x19
+ 1819 01cd 00       		.byte	0
+ 1820 01ce 00       		.byte	0
+ 1821 01cf 22       		.uleb128 0x22
+ 1822 01d0 01       		.uleb128 0x1
+ 1823 01d1 01       		.byte	0x1
+ 1824 01d2 49       		.uleb128 0x49
+ 1825 01d3 13       		.uleb128 0x13
+ 1826 01d4 01       		.uleb128 0x1
+ 1827 01d5 13       		.uleb128 0x13
+ 1828 01d6 00       		.byte	0
+ 1829 01d7 00       		.byte	0
+ 1830 01d8 23       		.uleb128 0x23
+ 1831 01d9 21       		.uleb128 0x21
+ 1832 01da 00       		.byte	0
+ 1833 01db 49       		.uleb128 0x49
+ 1834 01dc 13       		.uleb128 0x13
+ 1835 01dd 2F       		.uleb128 0x2f
+ 1836 01de 05       		.uleb128 0x5
+ 1837 01df 00       		.byte	0
+ 1838 01e0 00       		.byte	0
+ 1839 01e1 24       		.uleb128 0x24
+ 1840 01e2 34       		.uleb128 0x34
+ 1841 01e3 00       		.byte	0
+ 1842 01e4 03       		.uleb128 0x3
+ 1843 01e5 0E       		.uleb128 0xe
+ 1844 01e6 3A       		.uleb128 0x3a
+ 1845 01e7 0B       		.uleb128 0xb
+ 1846 01e8 3B       		.uleb128 0x3b
+ 1847 01e9 0B       		.uleb128 0xb
+ 1848 01ea 49       		.uleb128 0x49
+ 1849 01eb 13       		.uleb128 0x13
+ 1850 01ec 3F       		.uleb128 0x3f
+ 1851 01ed 19       		.uleb128 0x19
+ 1852 01ee 3C       		.uleb128 0x3c
+ 1853 01ef 19       		.uleb128 0x19
+ 1854 01f0 00       		.byte	0
+ 1855 01f1 00       		.byte	0
+ 1856 01f2 25       		.uleb128 0x25
+ 1857 01f3 26       		.uleb128 0x26
+ 1858 01f4 00       		.byte	0
+ 1859 01f5 49       		.uleb128 0x49
+ 1860 01f6 13       		.uleb128 0x13
+ 1861 01f7 00       		.byte	0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 39
+
+
+ 1862 01f8 00       		.byte	0
+ 1863 01f9 26       		.uleb128 0x26
+ 1864 01fa 34       		.uleb128 0x34
+ 1865 01fb 00       		.byte	0
+ 1866 01fc 03       		.uleb128 0x3
+ 1867 01fd 0E       		.uleb128 0xe
+ 1868 01fe 3A       		.uleb128 0x3a
+ 1869 01ff 0B       		.uleb128 0xb
+ 1870 0200 3B       		.uleb128 0x3b
+ 1871 0201 05       		.uleb128 0x5
+ 1872 0202 49       		.uleb128 0x49
+ 1873 0203 13       		.uleb128 0x13
+ 1874 0204 3F       		.uleb128 0x3f
+ 1875 0205 19       		.uleb128 0x19
+ 1876 0206 3C       		.uleb128 0x3c
+ 1877 0207 19       		.uleb128 0x19
+ 1878 0208 00       		.byte	0
+ 1879 0209 00       		.byte	0
+ 1880 020a 27       		.uleb128 0x27
+ 1881 020b 2E       		.uleb128 0x2e
+ 1882 020c 00       		.byte	0
+ 1883 020d 3F       		.uleb128 0x3f
+ 1884 020e 19       		.uleb128 0x19
+ 1885 020f 3C       		.uleb128 0x3c
+ 1886 0210 19       		.uleb128 0x19
+ 1887 0211 6E       		.uleb128 0x6e
+ 1888 0212 0E       		.uleb128 0xe
+ 1889 0213 03       		.uleb128 0x3
+ 1890 0214 0E       		.uleb128 0xe
+ 1891 0215 3A       		.uleb128 0x3a
+ 1892 0216 0B       		.uleb128 0xb
+ 1893 0217 3B       		.uleb128 0x3b
+ 1894 0218 0B       		.uleb128 0xb
+ 1895 0219 00       		.byte	0
+ 1896 021a 00       		.byte	0
+ 1897 021b 28       		.uleb128 0x28
+ 1898 021c 2E       		.uleb128 0x2e
+ 1899 021d 00       		.byte	0
+ 1900 021e 3F       		.uleb128 0x3f
+ 1901 021f 19       		.uleb128 0x19
+ 1902 0220 3C       		.uleb128 0x3c
+ 1903 0221 19       		.uleb128 0x19
+ 1904 0222 6E       		.uleb128 0x6e
+ 1905 0223 0E       		.uleb128 0xe
+ 1906 0224 03       		.uleb128 0x3
+ 1907 0225 0E       		.uleb128 0xe
+ 1908 0226 3A       		.uleb128 0x3a
+ 1909 0227 0B       		.uleb128 0xb
+ 1910 0228 3B       		.uleb128 0x3b
+ 1911 0229 05       		.uleb128 0x5
+ 1912 022a 00       		.byte	0
+ 1913 022b 00       		.byte	0
+ 1914 022c 00       		.byte	0
+ 1915              		.section	.debug_loc,"",%progbits
+ 1916              	.Ldebug_loc0:
+ 1917              	.LLST0:
+ 1918 0000 00000000 		.4byte	.LVL0
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 40
+
+
+ 1919 0004 10000000 		.4byte	.LVL2
+ 1920 0008 0100     		.2byte	0x1
+ 1921 000a 50       		.byte	0x50
+ 1922 000b 10000000 		.4byte	.LVL2
+ 1923 000f 2E000000 		.4byte	.LVL4
+ 1924 0013 0100     		.2byte	0x1
+ 1925 0015 54       		.byte	0x54
+ 1926 0016 00000000 		.4byte	0
+ 1927 001a 00000000 		.4byte	0
+ 1928              	.LLST1:
+ 1929 001e 04000000 		.4byte	.LVL1
+ 1930 0022 40000000 		.4byte	.LVL5
+ 1931 0026 0200     		.2byte	0x2
+ 1932 0028 30       		.byte	0x30
+ 1933 0029 9F       		.byte	0x9f
+ 1934 002a 40000000 		.4byte	.LVL5
+ 1935 002e 48000000 		.4byte	.LVL6
+ 1936 0032 0100     		.2byte	0x1
+ 1937 0034 55       		.byte	0x55
+ 1938 0035 48000000 		.4byte	.LVL6
+ 1939 0039 4E000000 		.4byte	.LVL7
+ 1940 003d 0200     		.2byte	0x2
+ 1941 003f 30       		.byte	0x30
+ 1942 0040 9F       		.byte	0x9f
+ 1943 0041 4E000000 		.4byte	.LVL7
+ 1944 0045 5C000000 		.4byte	.LVL10
+ 1945 0049 0100     		.2byte	0x1
+ 1946 004b 55       		.byte	0x55
+ 1947 004c 5C000000 		.4byte	.LVL10
+ 1948 0050 64000000 		.4byte	.LFE512
+ 1949 0054 0100     		.2byte	0x1
+ 1950 0056 50       		.byte	0x50
+ 1951 0057 00000000 		.4byte	0
+ 1952 005b 00000000 		.4byte	0
+ 1953              		.section	.debug_aranges,"",%progbits
+ 1954 0000 34000000 		.4byte	0x34
+ 1955 0004 0200     		.2byte	0x2
+ 1956 0006 00000000 		.4byte	.Ldebug_info0
+ 1957 000a 04       		.byte	0x4
+ 1958 000b 00       		.byte	0
+ 1959 000c 0000     		.2byte	0
+ 1960 000e 0000     		.2byte	0
+ 1961 0010 00000000 		.4byte	.LFB512
+ 1962 0014 64000000 		.4byte	.LFE512-.LFB512
+ 1963 0018 00000000 		.4byte	.LFB513
+ 1964 001c 16000000 		.4byte	.LFE513-.LFB513
+ 1965 0020 00000000 		.4byte	.LFB514
+ 1966 0024 10000000 		.4byte	.LFE514-.LFB514
+ 1967 0028 00000000 		.4byte	.LFB515
+ 1968 002c 14000000 		.4byte	.LFE515-.LFB515
+ 1969 0030 00000000 		.4byte	0
+ 1970 0034 00000000 		.4byte	0
+ 1971              		.section	.debug_ranges,"",%progbits
+ 1972              	.Ldebug_ranges0:
+ 1973 0000 00000000 		.4byte	.LFB512
+ 1974 0004 64000000 		.4byte	.LFE512
+ 1975 0008 00000000 		.4byte	.LFB513
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 41
+
+
+ 1976 000c 16000000 		.4byte	.LFE513
+ 1977 0010 00000000 		.4byte	.LFB514
+ 1978 0014 10000000 		.4byte	.LFE514
+ 1979 0018 00000000 		.4byte	.LFB515
+ 1980 001c 14000000 		.4byte	.LFE515
+ 1981 0020 00000000 		.4byte	0
+ 1982 0024 00000000 		.4byte	0
+ 1983              		.section	.debug_line,"",%progbits
+ 1984              	.Ldebug_line0:
+ 1985 0000 ED030000 		.section	.debug_str,"MS",%progbits,1
+ 1985      02008603 
+ 1985      00000201 
+ 1985      FB0E0D00 
+ 1985      01010101 
+ 1986              	.LASF58:
+ 1987 0000 70726F74 		.ascii	"protBusMasterMask\000"
+ 1987      4275734D 
+ 1987      61737465 
+ 1987      724D6173 
+ 1987      6B00
+ 1988              	.LASF150:
+ 1989 0012 72784275 		.ascii	"rxBufSize\000"
+ 1989      6653697A 
+ 1989      6500
+ 1990              	.LASF68:
+ 1991 001c 666C6173 		.ascii	"flashCtlMainWs3Freq\000"
+ 1991      6843746C 
+ 1991      4D61696E 
+ 1991      57733346 
+ 1991      72657100 
+ 1992              	.LASF90:
+ 1993 0030 6770696F 		.ascii	"gpioPrtCfgInOffset\000"
+ 1993      50727443 
+ 1993      6667496E 
+ 1993      4F666673 
+ 1993      657400
+ 1994              	.LASF4:
+ 1995 0043 73697A65 		.ascii	"size_t\000"
+ 1995      5F7400
+ 1996              	.LASF34:
+ 1997 004a 63727970 		.ascii	"cryptoVersion\000"
+ 1997      746F5665 
+ 1997      7273696F 
+ 1997      6E00
+ 1998              	.LASF52:
+ 1999 0058 70657269 		.ascii	"periClockNr\000"
+ 1999      436C6F63 
+ 1999      6B4E7200 
+ 2000              	.LASF30:
+ 2001 0064 70617373 		.ascii	"passBase\000"
+ 2001      42617365 
+ 2001      00
+ 2002              	.LASF43:
+ 2003 006d 63707573 		.ascii	"cpussIpcIrqNr\000"
+ 2003      73497063 
+ 2003      4972714E 
+ 2003      7200
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 42
+
+
+ 2004              	.LASF5:
+ 2005 007b 5F5F7569 		.ascii	"__uint8_t\000"
+ 2005      6E74385F 
+ 2005      7400
+ 2006              	.LASF128:
+ 2007 0085 736C6176 		.ascii	"slaveStatus\000"
+ 2007      65537461 
+ 2007      74757300 
+ 2008              	.LASF87:
+ 2009 0091 70657269 		.ascii	"periDiv24_5CtlOffset\000"
+ 2009      44697632 
+ 2009      345F3543 
+ 2009      746C4F66 
+ 2009      66736574 
+ 2010              	.LASF94:
+ 2011 00a6 63707573 		.ascii	"cpussCm4ClockCtlOffset\000"
+ 2011      73436D34 
+ 2011      436C6F63 
+ 2011      6B43746C 
+ 2011      4F666673 
+ 2012              	.LASF23:
+ 2013 00bd 63707573 		.ascii	"cpussBase\000"
+ 2013      73426173 
+ 2013      6500
+ 2014              	.LASF72:
+ 2015 00c7 64774368 		.ascii	"dwChCtlPrioPos\000"
+ 2015      43746C50 
+ 2015      72696F50 
+ 2015      6F7300
+ 2016              	.LASF173:
+ 2017 00d6 756C4E65 		.ascii	"ulNewBASEPRI\000"
+ 2017      77424153 
+ 2017      45505249 
+ 2017      00
+ 2018              	.LASF15:
+ 2019 00e3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2019      206C6F6E 
+ 2019      6720756E 
+ 2019      7369676E 
+ 2019      65642069 
+ 2020              	.LASF76:
+ 2021 00fa 70657269 		.ascii	"periTrCmdOffset\000"
+ 2021      5472436D 
+ 2021      644F6666 
+ 2021      73657400 
+ 2022              	.LASF145:
+ 2023 010a 72785269 		.ascii	"rxRingBuf\000"
+ 2023      6E674275 
+ 2023      6600
+ 2024              	.LASF100:
+ 2025 0114 63707573 		.ascii	"cpussSysTickCtlOffset\000"
+ 2025      73537973 
+ 2025      5469636B 
+ 2025      43746C4F 
+ 2025      66667365 
+ 2026              	.LASF121:
+ 2027 012a 6D617374 		.ascii	"masterStatus\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 43
+
+
+ 2027      65725374 
+ 2027      61747573 
+ 2027      00
+ 2028              	.LASF163:
+ 2029 0137 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2029      52784275 
+ 2029      66666572 
+ 2029      00
+ 2030              	.LASF61:
+ 2031 0144 666C6173 		.ascii	"flashPipeRequired\000"
+ 2031      68506970 
+ 2031      65526571 
+ 2031      75697265 
+ 2031      6400
+ 2032              	.LASF136:
+ 2033 0156 736C6176 		.ascii	"slaveRxBufferIdx\000"
+ 2033      65527842 
+ 2033      75666665 
+ 2033      72496478 
+ 2033      00
+ 2034              	.LASF141:
+ 2035 0167 63795F73 		.ascii	"cy_stc_scb_i2c_context\000"
+ 2035      74635F73 
+ 2035      63625F69 
+ 2035      32635F63 
+ 2035      6F6E7465 
+ 2036              	.LASF65:
+ 2037 017e 666C6173 		.ascii	"flashCtlMainWs0Freq\000"
+ 2037      6843746C 
+ 2037      4D61696E 
+ 2037      57733046 
+ 2037      72657100 
+ 2038              	.LASF19:
+ 2039 0192 696E7431 		.ascii	"int16_t\000"
+ 2039      365F7400 
+ 2040              	.LASF1:
+ 2041 019a 6C6F6E67 		.ascii	"long long int\000"
+ 2041      206C6F6E 
+ 2041      6720696E 
+ 2041      7400
+ 2042              	.LASF3:
+ 2043 01a8 7369676E 		.ascii	"signed char\000"
+ 2043      65642063 
+ 2043      68617200 
+ 2044              	.LASF81:
+ 2045 01b4 70657269 		.ascii	"periDivCmdTypeSelPos\000"
+ 2045      44697643 
+ 2045      6D645479 
+ 2045      70655365 
+ 2045      6C506F73 
+ 2046              	.LASF27:
+ 2047 01c9 70726F74 		.ascii	"protBase\000"
+ 2047      42617365 
+ 2047      00
+ 2048              	.LASF39:
+ 2049 01d2 69706356 		.ascii	"ipcVersion\000"
+ 2049      65727369 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 44
+
+
+ 2049      6F6E00
+ 2050              	.LASF135:
+ 2051 01dd 736C6176 		.ascii	"slaveRxBufferSize\000"
+ 2051      65527842 
+ 2051      75666665 
+ 2051      7253697A 
+ 2051      6500
+ 2052              	.LASF101:
+ 2053 01ef 63707573 		.ascii	"cpussCm0NmiCtlOffset\000"
+ 2053      73436D30 
+ 2053      4E6D6943 
+ 2053      746C4F66 
+ 2053      66736574 
+ 2054              	.LASF49:
+ 2055 0204 73727373 		.ascii	"srssNumClkpath\000"
+ 2055      4E756D43 
+ 2055      6C6B7061 
+ 2055      746800
+ 2056              	.LASF28:
+ 2057 0213 6873696F 		.ascii	"hsiomBase\000"
+ 2057      6D426173 
+ 2057      6500
+ 2058              	.LASF120:
+ 2059 021d 73746174 		.ascii	"state\000"
+ 2059      6500
+ 2060              	.LASF116:
+ 2061 0223 63795F63 		.ascii	"cy_cb_scb_i2c_handle_events_t\000"
+ 2061      625F7363 
+ 2061      625F6932 
+ 2061      635F6861 
+ 2061      6E646C65 
+ 2062              	.LASF12:
+ 2063 0241 6C6F6E67 		.ascii	"long int\000"
+ 2063      20696E74 
+ 2063      00
+ 2064              	.LASF123:
+ 2065 024a 6D617374 		.ascii	"masterRdDir\000"
+ 2065      65725264 
+ 2065      44697200 
+ 2066              	.LASF114:
+ 2067 0256 43595F53 		.ascii	"CY_SCB_I2C_NAK\000"
+ 2067      43425F49 
+ 2067      32435F4E 
+ 2067      414B00
+ 2068              	.LASF164:
+ 2069 0265 44454255 		.ascii	"DEBUG_UART_context\000"
+ 2069      475F5541 
+ 2069      52545F63 
+ 2069      6F6E7465 
+ 2069      787400
+ 2070              	.LASF166:
+ 2071 0278 76417070 		.ascii	"vApplicationMallocFailedHook\000"
+ 2071      6C696361 
+ 2071      74696F6E 
+ 2071      4D616C6C 
+ 2071      6F634661 
+ 2072              	.LASF59:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 45
+
+
+ 2073 0295 63727970 		.ascii	"cryptoMemSize\000"
+ 2073      746F4D65 
+ 2073      6D53697A 
+ 2073      6500
+ 2074              	.LASF25:
+ 2075 02a3 70657269 		.ascii	"periBase\000"
+ 2075      42617365 
+ 2075      00
+ 2076              	.LASF57:
+ 2077 02ac 73797350 		.ascii	"sysPmSimoPresent\000"
+ 2077      6D53696D 
+ 2077      6F507265 
+ 2077      73656E74 
+ 2077      00
+ 2078              	.LASF47:
+ 2079 02bd 63707573 		.ascii	"cpussFmIrq\000"
+ 2079      73466D49 
+ 2079      727100
+ 2080              	.LASF111:
+ 2081 02c8 646F7562 		.ascii	"double\000"
+ 2081      6C6500
+ 2082              	.LASF86:
+ 2083 02cf 70657269 		.ascii	"periDiv16_5CtlOffset\000"
+ 2083      44697631 
+ 2083      365F3543 
+ 2083      746C4F66 
+ 2083      66736574 
+ 2084              	.LASF50:
+ 2085 02e4 73727373 		.ascii	"srssNumPll\000"
+ 2085      4E756D50 
+ 2085      6C6C00
+ 2086              	.LASF84:
+ 2087 02ef 70657269 		.ascii	"periDiv8CtlOffset\000"
+ 2087      44697638 
+ 2087      43746C4F 
+ 2087      66667365 
+ 2087      7400
+ 2088              	.LASF91:
+ 2089 0301 6770696F 		.ascii	"gpioPrtCfgOutOffset\000"
+ 2089      50727443 
+ 2089      66674F75 
+ 2089      744F6666 
+ 2089      73657400 
+ 2090              	.LASF138:
+ 2091 0315 63624164 		.ascii	"cbAddr\000"
+ 2091      647200
+ 2092              	.LASF24:
+ 2093 031c 666C6173 		.ascii	"flashcBase\000"
+ 2093      68634261 
+ 2093      736500
+ 2094              	.LASF13:
+ 2095 0327 5F5F7569 		.ascii	"__uint32_t\000"
+ 2095      6E743332 
+ 2095      5F7400
+ 2096              	.LASF54:
+ 2097 0332 70617373 		.ascii	"passSarChannels\000"
+ 2097      53617243 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 46
+
+
+ 2097      68616E6E 
+ 2097      656C7300 
+ 2098              	.LASF174:
+ 2099 0342 7076506F 		.ascii	"pvPortMalloc\000"
+ 2099      72744D61 
+ 2099      6C6C6F63 
+ 2099      00
+ 2100              	.LASF7:
+ 2101 034f 5F5F696E 		.ascii	"__int16_t\000"
+ 2101      7431365F 
+ 2101      7400
+ 2102              	.LASF151:
+ 2103 0359 72784275 		.ascii	"rxBufIdx\000"
+ 2103      66496478 
+ 2103      00
+ 2104              	.LASF97:
+ 2105 0362 63707573 		.ascii	"cpussCm4PwrCtlOffset\000"
+ 2105      73436D34 
+ 2105      50777243 
+ 2105      746C4F66 
+ 2105      66736574 
+ 2106              	.LASF153:
+ 2107 0377 74784275 		.ascii	"txBufSize\000"
+ 2107      6653697A 
+ 2107      6500
+ 2108              	.LASF92:
+ 2109 0381 6770696F 		.ascii	"gpioPrtCfgSioOffset\000"
+ 2109      50727443 
+ 2109      66675369 
+ 2109      6F4F6666 
+ 2109      73657400 
+ 2110              	.LASF44:
+ 2111 0395 63707573 		.ascii	"cpussDwChNr\000"
+ 2111      73447743 
+ 2111      684E7200 
+ 2112              	.LASF0:
+ 2113 03a1 756E7369 		.ascii	"unsigned int\000"
+ 2113      676E6564 
+ 2113      20696E74 
+ 2113      00
+ 2114              	.LASF170:
+ 2115 03ae 47656E65 		.ascii	"Generated_Source\\PSoC6\\pdl\\rtos\\FreeRTOS\\10.0."
+ 2115      72617465 
+ 2115      645F536F 
+ 2115      75726365 
+ 2115      5C50536F 
+ 2116 03dc 315C536F 		.ascii	"1\\Source\\portable\\MemMang\\heap_1.c\000"
+ 2116      75726365 
+ 2116      5C706F72 
+ 2116      7461626C 
+ 2116      655C4D65 
+ 2117              	.LASF132:
+ 2118 03ff 736C6176 		.ascii	"slaveTxBufferIdx\000"
+ 2118      65547842 
+ 2118      75666665 
+ 2118      72496478 
+ 2118      00
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 47
+
+
+ 2119              	.LASF20:
+ 2120 0410 75696E74 		.ascii	"uint16_t\000"
+ 2120      31365F74 
+ 2120      00
+ 2121              	.LASF129:
+ 2122 0419 736C6176 		.ascii	"slaveRdBufEmpty\000"
+ 2122      65526442 
+ 2122      7566456D 
+ 2122      70747900 
+ 2123              	.LASF161:
+ 2124 0429 784E6578 		.ascii	"xNextFreeByte\000"
+ 2124      74467265 
+ 2124      65427974 
+ 2124      6500
+ 2125              	.LASF77:
+ 2126 0437 70657269 		.ascii	"periTrCmdGrSelMsk\000"
+ 2126      5472436D 
+ 2126      64477253 
+ 2126      656C4D73 
+ 2126      6B00
+ 2127              	.LASF66:
+ 2128 0449 666C6173 		.ascii	"flashCtlMainWs1Freq\000"
+ 2128      6843746C 
+ 2128      4D61696E 
+ 2128      57733146 
+ 2128      72657100 
+ 2129              	.LASF14:
+ 2130 045d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2130      20756E73 
+ 2130      69676E65 
+ 2130      6420696E 
+ 2130      7400
+ 2131              	.LASF140:
+ 2132 046f 63795F63 		.ascii	"cy_cb_scb_uart_handle_events_t\000"
+ 2132      625F7363 
+ 2132      625F7561 
+ 2132      72745F68 
+ 2132      616E646C 
+ 2133              	.LASF42:
+ 2134 048e 63707573 		.ascii	"cpussIpcNr\000"
+ 2134      73497063 
+ 2134      4E7200
+ 2135              	.LASF159:
+ 2136 0499 7857616E 		.ascii	"xWantedSize\000"
+ 2136      74656453 
+ 2136      697A6500 
+ 2137              	.LASF29:
+ 2138 04a5 6770696F 		.ascii	"gpioBase\000"
+ 2138      42617365 
+ 2138      00
+ 2139              	.LASF67:
+ 2140 04ae 666C6173 		.ascii	"flashCtlMainWs2Freq\000"
+ 2140      6843746C 
+ 2140      4D61696E 
+ 2140      57733246 
+ 2140      72657100 
+ 2141              	.LASF119:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 48
+
+
+ 2142 04c2 75736554 		.ascii	"useTxFifo\000"
+ 2142      78466966 
+ 2142      6F00
+ 2143              	.LASF78:
+ 2144 04cc 70657269 		.ascii	"periTrGrOffset\000"
+ 2144      54724772 
+ 2144      4F666673 
+ 2144      657400
+ 2145              	.LASF105:
+ 2146 04db 63707573 		.ascii	"cpussRam1Ctl0\000"
+ 2146      7352616D 
+ 2146      3143746C 
+ 2146      3000
+ 2147              	.LASF137:
+ 2148 04e9 63624576 		.ascii	"cbEvents\000"
+ 2148      656E7473 
+ 2148      00
+ 2149              	.LASF79:
+ 2150 04f2 70657269 		.ascii	"periTrGrSize\000"
+ 2150      54724772 
+ 2150      53697A65 
+ 2150      00
+ 2151              	.LASF37:
+ 2152 04ff 6770696F 		.ascii	"gpioVersion\000"
+ 2152      56657273 
+ 2152      696F6E00 
+ 2153              	.LASF152:
+ 2154 050b 74784275 		.ascii	"txBuf\000"
+ 2154      6600
+ 2155              	.LASF109:
+ 2156 0511 63795F73 		.ascii	"cy_stc_device_t\000"
+ 2156      74635F64 
+ 2156      65766963 
+ 2156      655F7400 
+ 2157              	.LASF175:
+ 2158 0521 76506F72 		.ascii	"vPortFree\000"
+ 2158      74467265 
+ 2158      6500
+ 2159              	.LASF172:
+ 2160 052b 76506F72 		.ascii	"vPortRaiseBASEPRI\000"
+ 2160      74526169 
+ 2160      73654241 
+ 2160      53455052 
+ 2160      4900
+ 2161              	.LASF55:
+ 2162 053d 65704D6F 		.ascii	"epMonitorNr\000"
+ 2162      6E69746F 
+ 2162      724E7200 
+ 2163              	.LASF147:
+ 2164 0549 72785269 		.ascii	"rxRingBufHead\000"
+ 2164      6E674275 
+ 2164      66486561 
+ 2164      6400
+ 2165              	.LASF98:
+ 2166 0557 63707573 		.ascii	"cpussTrimRamCtlOffset\000"
+ 2166      73547269 
+ 2166      6D52616D 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 49
+
+
+ 2166      43746C4F 
+ 2166      66667365 
+ 2167              	.LASF134:
+ 2168 056d 736C6176 		.ascii	"slaveRxBuffer\000"
+ 2168      65527842 
+ 2168      75666665 
+ 2168      7200
+ 2169              	.LASF93:
+ 2170 057b 63707573 		.ascii	"cpussCm0ClockCtlOffset\000"
+ 2170      73436D30 
+ 2170      436C6F63 
+ 2170      6B43746C 
+ 2170      4F666673 
+ 2171              	.LASF33:
+ 2172 0592 63707573 		.ascii	"cpussVersion\000"
+ 2172      73566572 
+ 2172      73696F6E 
+ 2172      00
+ 2173              	.LASF40:
+ 2174 059f 70657269 		.ascii	"periVersion\000"
+ 2174      56657273 
+ 2174      696F6E00 
+ 2175              	.LASF96:
+ 2176 05ab 63707573 		.ascii	"cpussCm0StatusOffset\000"
+ 2176      73436D30 
+ 2176      53746174 
+ 2176      75734F66 
+ 2176      66736574 
+ 2177              	.LASF16:
+ 2178 05c0 73697A65 		.ascii	"sizetype\000"
+ 2178      74797065 
+ 2178      00
+ 2179              	.LASF70:
+ 2180 05c9 64774368 		.ascii	"dwChOffset\000"
+ 2180      4F666673 
+ 2180      657400
+ 2181              	.LASF126:
+ 2182 05d4 6D617374 		.ascii	"masterBufferIdx\000"
+ 2182      65724275 
+ 2182      66666572 
+ 2182      49647800 
+ 2183              	.LASF45:
+ 2184 05e4 63707573 		.ascii	"cpussFlashPaSize\000"
+ 2184      73466C61 
+ 2184      73685061 
+ 2184      53697A65 
+ 2184      00
+ 2185              	.LASF83:
+ 2186 05f5 70657269 		.ascii	"periDivCmdPaTypeSelPos\000"
+ 2186      44697643 
+ 2186      6D645061 
+ 2186      54797065 
+ 2186      53656C50 
+ 2187              	.LASF106:
+ 2188 060c 63707573 		.ascii	"cpussRam2Ctl0\000"
+ 2188      7352616D 
+ 2188      3243746C 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 50
+
+
+ 2188      3000
+ 2189              	.LASF74:
+ 2190 061a 64775374 		.ascii	"dwStatusChIdxPos\000"
+ 2190      61747573 
+ 2190      43684964 
+ 2190      78506F73 
+ 2190      00
+ 2191              	.LASF56:
+ 2192 062b 75646250 		.ascii	"udbPresent\000"
+ 2192      72657365 
+ 2192      6E7400
+ 2193              	.LASF144:
+ 2194 0636 72785374 		.ascii	"rxStatus\000"
+ 2194      61747573 
+ 2194      00
+ 2195              	.LASF160:
+ 2196 063f 75634865 		.ascii	"ucHeap\000"
+ 2196      617000
+ 2197              	.LASF36:
+ 2198 0646 666C6173 		.ascii	"flashcVersion\000"
+ 2198      68635665 
+ 2198      7273696F 
+ 2198      6E00
+ 2199              	.LASF32:
+ 2200 0654 63727970 		.ascii	"cryptoBase\000"
+ 2200      746F4261 
+ 2200      736500
+ 2201              	.LASF53:
+ 2202 065f 736D6966 		.ascii	"smifDeviceNr\000"
+ 2202      44657669 
+ 2202      63654E72 
+ 2202      00
+ 2203              	.LASF169:
+ 2204 066c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2204      43313120 
+ 2204      352E342E 
+ 2204      31203230 
+ 2204      31363036 
+ 2205 069f 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m4 -mfloat-abi=s"
+ 2205      20726576 
+ 2205      6973696F 
+ 2205      6E203233 
+ 2205      37373135 
+ 2206 06d2 6F667466 		.ascii	"oftfp -mfpu=fpv4-sp-d16 -mthumb -g -Og -ffunction-s"
+ 2206      70202D6D 
+ 2206      6670753D 
+ 2206      66707634 
+ 2206      2D73702D 
+ 2207 0705 65637469 		.ascii	"ections -ffat-lto-objects\000"
+ 2207      6F6E7320 
+ 2207      2D666661 
+ 2207      742D6C74 
+ 2207      6F2D6F62 
+ 2208              	.LASF110:
+ 2209 071f 666C6F61 		.ascii	"float\000"
+ 2209      7400
+ 2210              	.LASF75:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 51
+
+
+ 2211 0725 64775374 		.ascii	"dwStatusChIdxMsk\000"
+ 2211      61747573 
+ 2211      43684964 
+ 2211      784D736B 
+ 2211      00
+ 2212              	.LASF157:
+ 2213 0736 70765265 		.ascii	"pvReturn\000"
+ 2213      7475726E 
+ 2213      00
+ 2214              	.LASF162:
+ 2215 073f 63795F64 		.ascii	"cy_device\000"
+ 2215      65766963 
+ 2215      6500
+ 2216              	.LASF103:
+ 2217 0749 63707573 		.ascii	"cpussRomCtl\000"
+ 2217      73526F6D 
+ 2217      43746C00 
+ 2218              	.LASF73:
+ 2219 0755 64774368 		.ascii	"dwChCtlPreemptablePos\000"
+ 2219      43746C50 
+ 2219      7265656D 
+ 2219      70746162 
+ 2219      6C65506F 
+ 2220              	.LASF154:
+ 2221 076b 74784C65 		.ascii	"txLeftToTransmit\000"
+ 2221      6674546F 
+ 2221      5472616E 
+ 2221      736D6974 
+ 2221      00
+ 2222              	.LASF165:
+ 2223 077c 4932436D 		.ascii	"I2Cm_context\000"
+ 2223      5F636F6E 
+ 2223      74657874 
+ 2223      00
+ 2224              	.LASF26:
+ 2225 0789 75646242 		.ascii	"udbBase\000"
+ 2225      61736500 
+ 2226              	.LASF113:
+ 2227 0791 43595F53 		.ascii	"CY_SCB_I2C_ACK\000"
+ 2227      43425F49 
+ 2227      32435F41 
+ 2227      434B00
+ 2228              	.LASF112:
+ 2229 07a0 5F426F6F 		.ascii	"_Bool\000"
+ 2229      6C00
+ 2230              	.LASF21:
+ 2231 07a6 696E7433 		.ascii	"int32_t\000"
+ 2231      325F7400 
+ 2232              	.LASF6:
+ 2233 07ae 756E7369 		.ascii	"unsigned char\000"
+ 2233      676E6564 
+ 2233      20636861 
+ 2233      7200
+ 2234              	.LASF177:
+ 2235 07bc 78506F72 		.ascii	"xPortGetFreeHeapSize\000"
+ 2235      74476574 
+ 2235      46726565 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 52
+
+
+ 2235      48656170 
+ 2235      53697A65 
+ 2236              	.LASF69:
+ 2237 07d1 666C6173 		.ascii	"flashCtlMainWs4Freq\000"
+ 2237      6843746C 
+ 2237      4D61696E 
+ 2237      57733446 
+ 2237      72657100 
+ 2238              	.LASF108:
+ 2239 07e5 6970634C 		.ascii	"ipcLockStatusOffset\000"
+ 2239      6F636B53 
+ 2239      74617475 
+ 2239      734F6666 
+ 2239      73657400 
+ 2240              	.LASF8:
+ 2241 07f9 73686F72 		.ascii	"short int\000"
+ 2241      7420696E 
+ 2241      7400
+ 2242              	.LASF168:
+ 2243 0803 78546173 		.ascii	"xTaskResumeAll\000"
+ 2243      6B526573 
+ 2243      756D6541 
+ 2243      6C6C00
+ 2244              	.LASF176:
+ 2245 0812 76506F72 		.ascii	"vPortInitialiseBlocks\000"
+ 2245      74496E69 
+ 2245      7469616C 
+ 2245      69736542 
+ 2245      6C6F636B 
+ 2246              	.LASF125:
+ 2247 0828 6D617374 		.ascii	"masterBufferSize\000"
+ 2247      65724275 
+ 2247      66666572 
+ 2247      53697A65 
+ 2247      00
+ 2248              	.LASF80:
+ 2249 0839 70657269 		.ascii	"periDivCmdDivSelMsk\000"
+ 2249      44697643 
+ 2249      6D644469 
+ 2249      7653656C 
+ 2249      4D736B00 
+ 2250              	.LASF122:
+ 2251 084d 6D617374 		.ascii	"masterPause\000"
+ 2251      65725061 
+ 2251      75736500 
+ 2252              	.LASF117:
+ 2253 0859 63795F63 		.ascii	"cy_cb_scb_i2c_handle_addr_t\000"
+ 2253      625F7363 
+ 2253      625F6932 
+ 2253      635F6861 
+ 2253      6E646C65 
+ 2254              	.LASF127:
+ 2255 0875 6D617374 		.ascii	"masterNumBytes\000"
+ 2255      65724E75 
+ 2255      6D427974 
+ 2255      657300
+ 2256              	.LASF133:
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 53
+
+
+ 2257 0884 736C6176 		.ascii	"slaveTxBufferCnt\000"
+ 2257      65547842 
+ 2257      75666665 
+ 2257      72436E74 
+ 2257      00
+ 2258              	.LASF64:
+ 2259 0895 666C6173 		.ascii	"flashEraseDelay\000"
+ 2259      68457261 
+ 2259      73654465 
+ 2259      6C617900 
+ 2260              	.LASF22:
+ 2261 08a5 75696E74 		.ascii	"uint32_t\000"
+ 2261      33325F74 
+ 2261      00
+ 2262              	.LASF139:
+ 2263 08ae 63795F73 		.ascii	"cy_stc_scb_i2c_context_t\000"
+ 2263      74635F73 
+ 2263      63625F69 
+ 2263      32635F63 
+ 2263      6F6E7465 
+ 2264              	.LASF167:
+ 2265 08c7 76546173 		.ascii	"vTaskSuspendAll\000"
+ 2265      6B537573 
+ 2265      70656E64 
+ 2265      416C6C00 
+ 2266              	.LASF2:
+ 2267 08d7 6C6F6E67 		.ascii	"long double\000"
+ 2267      20646F75 
+ 2267      626C6500 
+ 2268              	.LASF17:
+ 2269 08e3 63686172 		.ascii	"char\000"
+ 2269      00
+ 2270              	.LASF41:
+ 2271 08e8 70726F74 		.ascii	"protVersion\000"
+ 2271      56657273 
+ 2271      696F6E00 
+ 2272              	.LASF104:
+ 2273 08f4 63707573 		.ascii	"cpussRam0Ctl0\000"
+ 2273      7352616D 
+ 2273      3043746C 
+ 2273      3000
+ 2274              	.LASF9:
+ 2275 0902 5F5F7569 		.ascii	"__uint16_t\000"
+ 2275      6E743136 
+ 2275      5F7400
+ 2276              	.LASF85:
+ 2277 090d 70657269 		.ascii	"periDiv16CtlOffset\000"
+ 2277      44697631 
+ 2277      3643746C 
+ 2277      4F666673 
+ 2277      657400
+ 2278              	.LASF11:
+ 2279 0920 5F5F696E 		.ascii	"__int32_t\000"
+ 2279      7433325F 
+ 2279      7400
+ 2280              	.LASF124:
+ 2281 092a 6D617374 		.ascii	"masterBuffer\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 54
+
+
+ 2281      65724275 
+ 2281      66666572 
+ 2281      00
+ 2282              	.LASF38:
+ 2283 0937 6873696F 		.ascii	"hsiomVersion\000"
+ 2283      6D566572 
+ 2283      73696F6E 
+ 2283      00
+ 2284              	.LASF63:
+ 2285 0944 666C6173 		.ascii	"flashProgramDelay\000"
+ 2285      6850726F 
+ 2285      6772616D 
+ 2285      44656C61 
+ 2285      7900
+ 2286              	.LASF48:
+ 2287 0956 63707573 		.ascii	"cpussNotConnectedIrq\000"
+ 2287      734E6F74 
+ 2287      436F6E6E 
+ 2287      65637465 
+ 2287      64497271 
+ 2288              	.LASF146:
+ 2289 096b 72785269 		.ascii	"rxRingBufSize\000"
+ 2289      6E674275 
+ 2289      6653697A 
+ 2289      6500
+ 2290              	.LASF10:
+ 2291 0979 73686F72 		.ascii	"short unsigned int\000"
+ 2291      7420756E 
+ 2291      7369676E 
+ 2291      65642069 
+ 2291      6E7400
+ 2292              	.LASF71:
+ 2293 098c 64774368 		.ascii	"dwChSize\000"
+ 2293      53697A65 
+ 2293      00
+ 2294              	.LASF107:
+ 2295 0995 69706353 		.ascii	"ipcStructSize\000"
+ 2295      74727563 
+ 2295      7453697A 
+ 2295      6500
+ 2296              	.LASF118:
+ 2297 09a3 75736552 		.ascii	"useRxFifo\000"
+ 2297      78466966 
+ 2297      6F00
+ 2298              	.LASF46:
+ 2299 09ad 63707573 		.ascii	"cpussIpc0Irq\000"
+ 2299      73497063 
+ 2299      30497271 
+ 2299      00
+ 2300              	.LASF89:
+ 2301 09ba 6770696F 		.ascii	"gpioPrtCfgOffset\000"
+ 2301      50727443 
+ 2301      66674F66 
+ 2301      66736574 
+ 2301      00
+ 2302              	.LASF155:
+ 2303 09cb 696E6974 		.ascii	"initKey\000"
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 55
+
+
+ 2303      4B657900 
+ 2304              	.LASF149:
+ 2305 09d3 72784275 		.ascii	"rxBuf\000"
+ 2305      6600
+ 2306              	.LASF130:
+ 2307 09d9 736C6176 		.ascii	"slaveTxBuffer\000"
+ 2307      65547842 
+ 2307      75666665 
+ 2307      7200
+ 2308              	.LASF131:
+ 2309 09e7 736C6176 		.ascii	"slaveTxBufferSize\000"
+ 2309      65547842 
+ 2309      75666665 
+ 2309      7253697A 
+ 2309      6500
+ 2310              	.LASF156:
+ 2311 09f9 63795F73 		.ascii	"cy_stc_scb_uart_context_t\000"
+ 2311      74635F73 
+ 2311      63625F75 
+ 2311      6172745F 
+ 2311      636F6E74 
+ 2312              	.LASF51:
+ 2313 0a13 73727373 		.ascii	"srssNumHfroot\000"
+ 2313      4E756D48 
+ 2313      66726F6F 
+ 2313      7400
+ 2314              	.LASF115:
+ 2315 0a21 63795F65 		.ascii	"cy_en_scb_i2c_command_t\000"
+ 2315      6E5F7363 
+ 2315      625F6932 
+ 2315      635F636F 
+ 2315      6D6D616E 
+ 2316              	.LASF102:
+ 2317 0a39 63707573 		.ascii	"cpussCm4NmiCtlOffset\000"
+ 2317      73436D34 
+ 2317      4E6D6943 
+ 2317      746C4F66 
+ 2317      66736574 
+ 2318              	.LASF158:
+ 2319 0a4e 70756341 		.ascii	"pucAlignedHeap\000"
+ 2319      6C69676E 
+ 2319      65644865 
+ 2319      617000
+ 2320              	.LASF62:
+ 2321 0a5d 666C6173 		.ascii	"flashWriteDelay\000"
+ 2321      68577269 
+ 2321      74654465 
+ 2321      6C617900 
+ 2322              	.LASF18:
+ 2323 0a6d 75696E74 		.ascii	"uint8_t\000"
+ 2323      385F7400 
+ 2324              	.LASF95:
+ 2325 0a75 63707573 		.ascii	"cpussCm4StatusOffset\000"
+ 2325      73436D34 
+ 2325      53746174 
+ 2325      75734F66 
+ 2325      66736574 
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 56
+
+
+ 2326              	.LASF88:
+ 2327 0a8a 6770696F 		.ascii	"gpioPrtIntrCfgOffset\000"
+ 2327      50727449 
+ 2327      6E747243 
+ 2327      66674F66 
+ 2327      66736574 
+ 2328              	.LASF148:
+ 2329 0a9f 72785269 		.ascii	"rxRingBufTail\000"
+ 2329      6E674275 
+ 2329      66546169 
+ 2329      6C00
+ 2330              	.LASF171:
+ 2331 0aad 433A5C55 		.ascii	"C:\\Users\\Mathieu\\OneDrive\\Desktop\\Projet2\\PSo"
+ 2331      73657273 
+ 2331      5C4D6174 
+ 2331      68696575 
+ 2331      5C4F6E65 
+ 2332 0ada 43365F49 		.ascii	"C6_Interfacing_BMI160(I2C)_FreeRTOS01.cydsn\000"
+ 2332      6E746572 
+ 2332      66616369 
+ 2332      6E675F42 
+ 2332      4D493136 
+ 2333              	.LASF99:
+ 2334 0b06 63707573 		.ascii	"cpussTrimRomCtlOffset\000"
+ 2334      73547269 
+ 2334      6D526F6D 
+ 2334      43746C4F 
+ 2334      66667365 
+ 2335              	.LASF143:
+ 2336 0b1c 74785374 		.ascii	"txStatus\000"
+ 2336      61747573 
+ 2336      00
+ 2337              	.LASF35:
+ 2338 0b25 64775665 		.ascii	"dwVersion\000"
+ 2338      7273696F 
+ 2338      6E00
+ 2339              	.LASF31:
+ 2340 0b2f 69706342 		.ascii	"ipcBase\000"
+ 2340      61736500 
+ 2341              	.LASF82:
+ 2342 0b37 70657269 		.ascii	"periDivCmdPaDivSelPos\000"
+ 2342      44697643 
+ 2342      6D645061 
+ 2342      44697653 
+ 2342      656C506F 
+ 2343              	.LASF142:
+ 2344 0b4d 63795F73 		.ascii	"cy_stc_scb_uart_context\000"
+ 2344      74635F73 
+ 2344      63625F75 
+ 2344      6172745F 
+ 2344      636F6E74 
+ 2345              	.LASF60:
+ 2346 0b65 666C6173 		.ascii	"flashRwwRequired\000"
+ 2346      68527777 
+ 2346      52657175 
+ 2346      69726564 
+ 2346      00
+ARM GAS  C:\Users\Mathieu\AppData\Local\Temp\cckv5Vsl.s 			page 57
+
+
+ 2347              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

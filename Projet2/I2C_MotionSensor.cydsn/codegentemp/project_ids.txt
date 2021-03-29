@@ -1,0 +1,7 @@
+C:\Users\Mathieu\OneDrive\Desktop\Projet2\MotionDetectionViaInterupt.cydsn\MotionDetectionViaInterupt.cyprj|dc7b158c-7479-464d-9e2d-ae169f4dcd3d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|4212b2f8-c403-4910-bf35-6f4f941b0be2
+C:\Users\Mathieu\OneDrive\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|bf299539-94ba-448e-b0de-10f5d9ddd5d9
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|9d6247d1-387e-402e-81ed-71ec19cb7132
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7f12881c-04c6-4e14-b8bc-a0c80f56ba40
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2df36599-ff20-4a7c-b193-6b39a51bb9be
+C:\Users\Mathieu\OneDrive\Desktop\Projet2\I2C_MotionSensor.cydsn\I2C_MotionSensor.cyprj|2cdadc7e-2f6e-4e79-a2d7-f40e8dc141bc
